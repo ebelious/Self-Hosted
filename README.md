@@ -1,7 +1,12 @@
-![Cat](https://github.com/ebelious/Self-Hosted/blob/main/Images/fedora%20Cat.png)
+<p align="center">
+<img width="350" height="300" src="https://github.com/ebelious/Self-Hosted/blob/main/Images/fedora%20Cat.png">
+</p>
 
+<p align="center">
 These are some Docs for the projects and tools I have been using
+</p>
 
+#
 ## Projects:
 - [Ollama / Stable-Diffusion / Open-WebUI / Opendai](https://github.com/ebelious/Self-Hosted/blob/main/Install%20Open-WebUI%20with%20local%20hosted%20Ollama%20-%20Linux.md)
 - [Fabric](https://github.com/ebelious/Self-Hosted/blob/main/Fabric.md)
@@ -11,9 +16,7 @@ These are some Docs for the projects and tools I have been using
 - [WinRM HTTPS for Palo Alto](https://github.com/ebelious/Self-Hosted/blob/main/WinRM%20HTTPS%20for%20Palo%20Alto.md)
 - [Auto Mount Network Shares](https://github.com/ebelious/Self-Hosted/tree/main)
 - [Ansible](https://github.com/ebelious/Self-Hosted/blob/main/Ansible.md)
-
----
-
+#
 ## Tools:
 
 - [Nerd Fonts](https://github.com/ebelious/Self-Hosted/blob/main/Nerd%20Fonts.md) - Many fonts and icons
