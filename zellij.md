@@ -6,7 +6,7 @@ This is a terminal muklti plexer akin to tmux
   - Try Zellij: ```bash <(curl -L zellij.dev/launch)```
 
   - Download the binary
-    [Download](https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz)
+    [Download](https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz) (link from Official - https://zellij.dev/)
   - Move/Copy the binary to the `/usr/bin/`or `~/.local/bin/`
 
 ## Run Zelij
