@@ -1,5 +1,5 @@
 
-#fabric is an open-source framework for augmenting humans using AI.
+# fabric is an open-source framework for augmenting humans using AI.
 
 ## Install Dependancies
 
