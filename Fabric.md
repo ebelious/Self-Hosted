@@ -1,7 +1,9 @@
 Install Dependancies
+Debian/Ubuntu
 ```
 sudo apt install pipx
 ```
+Redhat/Fedora
 ```
 sudo dnf install pipx
 ```
@@ -13,4 +15,7 @@ git clone https://github.com/danielmiessler/fabric.git
 
 ```
 cd fabric
+```
+```
+pipx install .
 ```
