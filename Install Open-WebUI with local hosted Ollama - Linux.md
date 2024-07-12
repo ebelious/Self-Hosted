@@ -122,7 +122,7 @@ When these are filled out you can now turn on the image generation
 
 ** **Note**, some Models are not multi modal, thus are not able to generate images.
 
-Some Medels for Image Generation:
+Some Models for Image Generation:
 - llama3
 - llava
 
