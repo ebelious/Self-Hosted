@@ -32,7 +32,10 @@ If you want to integrate this with Google, Claude, or Youtube, you would need to
 ![Credentials-api](https://github.com/user-attachments/assets/749172c5-57ee-404a-8326-3ced35607f8b)
 ![Enable API](https://github.com/ebelious/Self-Hosted/blob/main/Images/Screenshot%20from%202024-07-12%2016-43-27.png)
 ![Credentials API](https://github.com/ebelious/Self-Hosted/blob/main/Images/Screenshot%20from%202024-07-12%2016-45-11.png)
-After you collect the API keys you run this:
+Once you get to thes page select next with the fololwing options selected 
+![nex1](https://github.com/ebelious/Self-Hosted/commit/80165d29cbb32d4a867e66f60281e3fa644e95fb)
+
+You can now get the API to input into the fabric configuration
 ```
 fabric --setup
 ```
