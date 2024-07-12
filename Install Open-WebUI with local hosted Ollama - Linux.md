@@ -36,7 +36,7 @@ These commands will generate 2 docker containers (May need to use sudo)
 
 This info can be seen at https://docs.openwebui.com/tutorial/openedai-speech-integration
 
-Open the Open WebUI settings and navigate to the TTS Settings under **Admin Panel > Settings > Audio**. Add the following configuration as shown in the following image:
+Open the Open WebUI settings and navigate to the TTS Settings under **Admin Panel > Settings > Audio**.
 
 ![openedai-tts](https://github.com/silentoplayz/docs/assets/50341825/ea08494f-2ebf-41a2-bb0f-9b48dd3ace79)
 
