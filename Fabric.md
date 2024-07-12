@@ -3,7 +3,7 @@ Debian/Ubuntu
 ```
 sudo apt install pipx
 ```
-Redhat/Fedora
+RedHat/Fedora
 ```
 sudo dnf install pipx
 ```
