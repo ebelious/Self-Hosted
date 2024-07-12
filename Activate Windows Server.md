@@ -23,9 +23,7 @@ slmgr /ipk your_license_key
 
 Replace `your_license_key` with following volumn license keys according to Windows Edition:
 
-```
-YOUR KEY HERE
-```
+```YOUR KEY HERE```
 
 ### Step 4 - Set KMS machine address
 
