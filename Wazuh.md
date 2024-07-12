@@ -37,7 +37,7 @@ Go to `Server Management` in the left panel menu
 - `Endpoint Groups` to create and edit groups
 - `Endpoint Summary` to create and edit all endpoints
 
-Select `Deploy New Agent`. This will bring up a bnew screen where you can pick an operating system. There is additional supported opperating systems listed in this [Documentation](https://documentation.wazuh.com/current/installation-guide/packages-list.html)
+Select `Deploy New Agent`. This will bring up a bnew screen where you can pick an operating system. There is additional supported opperating systems listed in this [Documentation](https://documentation.wazuh.com/current/installation-guide/packages-list.html) and also some manual additions for the wazuh [Repos](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-linux.html)
 
 You will fill out the following to get the comand to execute below on the hosts
 
