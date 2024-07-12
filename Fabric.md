@@ -1,13 +1,14 @@
-Install Dependancies
-Debian/Ubuntu
+# Install Dependancies
+
+### Debian/Ubuntu
 ```
 sudo apt install pipx
 ```
-RedHat/Fedora
+### RedHat/Fedora
 ```
 sudo dnf install pipx
 ```
-Download Repo from [fabric](https://github.com/danielmiessler/fabric)
+# Download Repo from [fabric](https://github.com/danielmiessler/fabric)
 
 ```
 git clone https://github.com/danielmiessler/fabric.git
