@@ -7,4 +7,4 @@ Projects:
 Tools:
 - [Pyenv](https://github.com/ebelious/Self-Hosted/blob/main/pyenv.md) - Python enviroment and version control
 - [Zellij](https://github.com/ebelious/Self-Hosted/blob/main/zellij.md) - Terminal multi plexer
-- [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts) - Many fonts and icons
+- [Nerd Fonts](https://github.com/ebelious/Self-Hosted/blob/main/Nerd%20Fonts.md) - Many fonts and icons
