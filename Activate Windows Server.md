@@ -23,7 +23,7 @@ slmgr /ipk your_license_key
 
 Replace `your_license_key` with following volumn license keys according to Windows Edition:
 
-```shell
+```
 YOUR KEY HERE
 ```
 
