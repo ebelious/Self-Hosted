@@ -88,3 +88,33 @@ When any changes are made on the Wazuh Manager configuration the changes need to
 ```
 systemctl restart wazuh-manager
 ```
+
+---
+
+# Remove Agents from Wazuh Manager 
+
+This is the [Documentaiton](https://documentation.wazuh.com/current/user-manual/agent/agent-management/remove-agents/remove.html) to remove an agent from the Manager via CLI
+
+SSH into Wazuh Server and execute the command below
+
+```
+sudo /var/ossec/bin/manage_agents
+```
+
+This will show the commands that can be ran including adding, extracting a key, listing, and removing agents.
+
+```
+****************************************
+* Wazuh v4.8.0 Agent manager.          *
+* The following options are available: *
+****************************************
+   (A)dd an agent (A).
+   (E)xtract key for an agent (E).
+   (L)ist already added agents (L).
+   (R)emove an agent (R).
+   (Q)uit.
+Choose your action: A,E,L,R or Q: L
+```
+
+Run this command above and then select `r` and then enter the agent ID to remove the specifiec agent.
+
