@@ -1,5 +1,4 @@
 
----
 ## 0: Prereqs
 
 - Verify the system is up to date (apt, dnf, ect)
