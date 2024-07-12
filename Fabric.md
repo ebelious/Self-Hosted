@@ -1,4 +1,4 @@
-# Install Dependancies
+## Install Dependancies
 
 ### Debian/Ubuntu
 ```
@@ -8,7 +8,7 @@ sudo apt install pipx
 ```
 sudo dnf install pipx
 ```
-# Download Repo from [fabric](https://github.com/danielmiessler/fabric)
+## Download Repo from [fabric](https://github.com/danielmiessler/fabric)
 
 ```
 git clone https://github.com/danielmiessler/fabric.git
@@ -22,7 +22,7 @@ pipx install .
 ```
 May have to ensure path `pipx ensurepath`
 
-# Configure fabric
+## Configure fabric
 
 If you want to integrate this with Google, Claude, or Youtube, you would need to get the API keys at this point before running the configuration
 - For Google and Youtube you would need to go to [Google Cloud](https://console.cloud.google.com/) and create an account if you dont already have one
