@@ -82,7 +82,7 @@ Add this configuration.
 ```
 Set the port for the syslog communication and either TCP or UDP.
 Make sure you set the allowed networks or address' that are allowed to send syslog messages to the server. 
-Set the Local IP to the IP of the WAzuh Management Server 
+Set the Local IP to the IP of the Wazuh Management Server 
 
 When any changes are made on the Wazuh Manager configuration the changes need to be saved and the service needs to be restarted 
 ```
