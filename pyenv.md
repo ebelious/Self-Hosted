@@ -4,19 +4,24 @@ Another approach to using different Python versions is to use pyenv, a popular P
 
 1. Install pyenv by following the instructions in the official pyenv repository: [pyenv](https://github.com/pyenv/pyenv#installation)
    
-  `curl https://pyenv.run | bash`
-
+  ``` shell
+  curl https://pyenv.run | bash`
+```
 3. Install the desired Python versions using pyenv. For example, to install Python 3.9, run the following command:
 
+``` shell
 pyenv install 3.9.0
-
+```
 3. Create a new virtual environment using the desired Python version. For example:
 
+``` shell
 pyenv virtualenv 3.9.0 myenv
-
+```
 4. Activate the virtual environment:
 
+``` shell
 pyenv activate myenv
+```
 
 This will set the desired Python version for the current shell session.
 
@@ -24,6 +29,7 @@ This will set the desired Python version for the current shell session.
 
 6. Deactivate the virtual environment when you are done:
 
+``` shell
 pyenv deactivate
-
+```
 Pyenv provides a flexible and convenient way to manage multiple Python versions and virtual environments, making it a popular choice for developers who frequently switch between different Python environments.
