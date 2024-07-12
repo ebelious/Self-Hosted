@@ -118,7 +118,7 @@ Navigate to **Admin Panel > Settings > Images** and configure these:
 
 When these are filled out you can now turn on the image generation
 
-![[Screenshot from 2024-07-12 13-27-11.png]]
+![[[Screenshot from 2024-07-12 13-27-11.png](https://github.com/ebelious/Self-Hosted/blob/main/Screenshot%20from%202024-07-12%2013-27-11.png)]]
 
 ** **Note**, some Models are not multi modal, thus are not able to generate images.
 
