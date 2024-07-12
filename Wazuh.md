@@ -57,10 +57,34 @@ sudo systemctl daemon-reload
 sudo systemctl enable wazuh-agent
 sudo systemctl start wazuh-agent
 ```
-The agent then will relay and lolad all information the the designated Wazuh Server 
+The agent then will relay and load all information the the designated Wazuh Server 
+You can see this information in the `Endpoint Summary` section
 
 ---
 
 # Enable Syslog
 
+This [Documentation](https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/syslog.html) shows how to integrate syslog functionality to Wazuh.
 
+Go to `Server Management` > `Settings` and here you will be able to modify the Wazuh Manager config file
+
+Select `Edit Configuration` on the top right of the screen
+
+Add this configuration. 
+```
+<remote>
+  <connection>syslog</connection>
+  <port>514</port>
+  <protocol>tcp</protocol>
+  <allowed-ips>192.168.2.15/24</allowed-ips>
+  <local_ip>192.168.2.10</local_ip>
+</remote>
+```
+Set the port for the syslog communication and either TCP or UDP.
+Make sure you set the allowed networks or address' that are allowed to send syslog messages to the server. 
+Set the Local IP to the IP of the WAzuh Management Server 
+
+When any changes are made on the Wazuh Manager configuration the changes need to be saved and the service needs to be restarted 
+```
+systemctl restart wazuh-manager
+```
