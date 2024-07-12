@@ -93,7 +93,7 @@ systemctl restart wazuh-manager
 
 # Remove Agents from Wazuh Manager 
 
-This is the [Documentaiton](https://documentation.wazuh.com/current/user-manual/agent/agent-management/remove-agents/remove.html) to remove an agent from the Manager via CLI
+This is the [Documentation](https://documentation.wazuh.com/current/user-manual/agent/agent-management/remove-agents/remove.html) to remove an agent from the Manager via CLI
 
 SSH into Wazuh Server and execute the command below
 
