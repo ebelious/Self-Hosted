@@ -1,5 +1,5 @@
 <p align="center">
-<img width="350" height="300" src="https://github.com/ebelious/Self-Hosted/blob/main/Images/fedora%20Cat.png">
+<img width="300" height="300" src="https://github.com/ebelious/Self-Hosted/blob/main/Images/fedora%20Cat.png">
 </p>
 
 <p align="center">
