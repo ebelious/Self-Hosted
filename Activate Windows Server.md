@@ -21,9 +21,9 @@ DISM /online /Set-Edition:ServerStandard /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXX
 slmgr /ipk your_license_key
 ```
 
-Replace `your_license_key` with following volumn license keys according to Windows Edition:
+Replace `your_license_key` with following volumn license keys with your key
 
-### Step 4 - Set KMS machine address
+### Step 4 - Set License manager
 
 ```shell
 slmgr /skms microsoft.com
