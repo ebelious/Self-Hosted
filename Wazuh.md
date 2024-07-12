@@ -1,6 +1,4 @@
-
-
-#Quick Install for Wazuh - [Quick Install](https://documentation.wazuh.com/current/quickstart.html)
+# Quick Install for Wazuh - [Quick Install](https://documentation.wazuh.com/current/quickstart.html)
 
 ```
 curl -sO https://packages.wazuh.com/4.8/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
@@ -27,4 +25,42 @@ Note You can find the passwords for all the Wazuh indexer and Wazuh API users in
 ```
 sudo tar -O -xvf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
 ```
-If you want to uninstall the Wazuh central components, run the Wazuh installation assistant using the option -u or –-uninstall.
+If you want to uninstall the Wazuh central components, run the Wazuh installation assistant using the option `-u` or `–-uninstall`
+
+---
+
+# Install Agents
+
+You may want to configure endpoint groups to make configuration changes to different operating systems easier. This will allow a single config to be made for all endpoints in those groups saving time and effort. ``
+
+Go to `Server Management` in the left panel menu
+- `Endpoint Groups` to create and edit groups
+- `Endpoint Summary` to create and edit all endpoints
+
+Select `Deploy New Agent`. This will bring up a bnew screen where you can pick an operating system. There is additional supported opperating systems listed in this [Documentation](https://documentation.wazuh.com/current/installation-guide/packages-list.html)
+
+You will fill out the following to get the comand to execute below on the hosts
+
+- Server address: This is the WAzuh management server you would like the agent to comuniucate with
+- Optional settings: This is where you enter the agent name and endpoint group
+
+After you fill out the informartion in these sections the commnand is displayed 
+
+Example: 
+```
+wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.8.0-1_amd64.deb && sudo WAZUH_MANAGER='10.1.1.9' WAZUH_AGENT_GROUP='Linux_Server' WAZUH_AGENT_NAME='test' dpkg -i ./wazuh-agent_4.8.0-1_amd64.deb
+```
+
+After you run the comand to install the agent you would then reload all the daemons and enable the service to start on system boot, and to start the service now.
+```
+sudo systemctl daemon-reload
+sudo systemctl enable wazuh-agent
+sudo systemctl start wazuh-agent
+```
+The agent then will relay and lolad all information the the designated Wazuh Server 
+
+---
+
+# Enable Syslog
+
+
