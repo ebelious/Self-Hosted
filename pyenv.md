@@ -3,8 +3,10 @@ Using pyenv
 Another approach to using different Python versions is to use pyenv, a popular Python version management tool. Pyenv allows you to easily install and switch between multiple Python versions on the same machine. Here are the basic steps to use pyenv:
 
 1. Install pyenv by following the instructions in the official pyenv repository: [pyenv](https://github.com/pyenv/pyenv#installation)
+   
+  curl https://pyenv.run | bash
 
-2. Install the desired Python versions using pyenv. For example, to install Python 3.9, run the following command:
+3. Install the desired Python versions using pyenv. For example, to install Python 3.9, run the following command:
 
 pyenv install 3.9.0
 
