@@ -34,7 +34,7 @@ Enable this API and and create the credentials
 ![Enable API](https://github.com/ebelious/Self-Hosted/blob/main/Images/Screenshot%20from%202024-07-12%2016-43-27.png)
 ![Credentials API](https://github.com/ebelious/Self-Hosted/blob/main/Images/Screenshot%20from%202024-07-12%2016-45-11.png)
 Once you get to thes page select next with the fololwing options selected 
-![nex1](https://github.com/ebelious/Self-Hosted/commit/80165d29cbb32d4a867e66f60281e3fa644e95fb)
+![nex1](https://github.com/ebelious/Self-Hosted/blob/main/Images/Screenshot%20from%202024-07-12%2016-47-23.png)
 
 You can now get the API to input into the fabric configuration
 ```
