@@ -7,7 +7,7 @@ These are some Docs for the projects and tools I have been using
 - [Activate Windows Server](https://github.com/ebelious/Self-Hosted/blob/main/Activate%20Windows%20Server.md)
 - [Linux Enterprise Account]()
 - [WinRM HTTPS for Palo Alto](https://github.com/ebelious/Self-Hosted/blob/main/WinRM%20HTTPS%20for%20Palo%20Alto.md)
-- [Auto Mount Network Shares]()
+- [Auto Mount Network Shares](https://github.com/ebelious/Self-Hosted/tree/main)
 - [Ansible](https://github.com/ebelious/Self-Hosted/blob/main/Ansible.md)
 
 ---
