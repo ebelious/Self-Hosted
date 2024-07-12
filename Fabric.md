@@ -75,7 +75,7 @@ yt --transcript https://youtu.be/UbDyjIIGaxQ | fabric -sp extract_wisdom
 Replicate pbpaste and pbcopy commands in lnux by modifying the .bashrc or .zshrc files
 
 
-Create aliases
+Create aliases and refresh the termnial (open new terminal or `source ~/.bashrc` or `source ~/.zshrc`)
 ```
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
