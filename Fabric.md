@@ -70,4 +70,24 @@ Get Youtube Transcript by right-clicking CC on the video and selecting `Copy vid
 yt --transcript https://youtu.be/UbDyjIIGaxQ | fabric -sp extract_wisdom
 ```
 
+#### Example 2:
 
+Replicate pbpaste and pbcopy commands in lnux by modifying .bashrc or .zshrc files
+Create aliases
+
+```
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+```
+
+```
+# Simulate OSX's pbcopy and pbpaste on other platforms
+if [ ! $(uname -s) = "Darwin" ]; then
+    alias pbcopy='xsel --clipboard --input'
+    alias pbpaste='xsel --clipboard --output'
+fi
+```
+
+```
+pbpaste | fabric -p summarize | fabric -sp write_essay
+```
