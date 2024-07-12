@@ -2,7 +2,7 @@
 Date: 6/23/2024\
 Topic: WinRM HTTPS Server Monitoring\
 Technology: Palo Alto, Windows Server\
-====================\
+====================
 
 ## Windows
 
