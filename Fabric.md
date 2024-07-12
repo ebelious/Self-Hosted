@@ -72,22 +72,16 @@ yt --transcript https://youtu.be/UbDyjIIGaxQ | fabric -sp extract_wisdom
 
 #### Example 2:
 
-Replicate pbpaste and pbcopy commands in lnux by modifying .bashrc or .zshrc files
-Create aliases
+Replicate pbpaste and pbcopy commands in lnux by modifying the .bashrc or .zshrc files
 
+
+Create aliases
 ```
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 ```
 
-```
-# Simulate OSX's pbcopy and pbpaste on other platforms
-if [ ! $(uname -s) = "Darwin" ]; then
-    alias pbcopy='xsel --clipboard --input'
-    alias pbpaste='xsel --clipboard --output'
-fi
-```
-
+Then we can now copy test from a website and have fabric generate a summary of all of the info on the website
 ```
 pbpaste | fabric -p summarize | fabric -sp write_essay
 ```
