@@ -20,7 +20,7 @@ cd fabric
 ```
 pipx install .
 ```
-May have to ensure path `pipx ensurepath`
+May have to ensure path `pipx ensurepath` and refresh terminal (open new terminal or `source .bashrc` or `source .zshrc`)
 
 ## Configure fabric
 
