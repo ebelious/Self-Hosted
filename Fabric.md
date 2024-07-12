@@ -24,12 +24,13 @@ May have to ensure path `pipx ensurepath`
 
 # Configure fabric
 
-If you want to integrate this with Google, claude, or Youtube, you would need to get the APIs at this point before rnning the configuration
-- For Google and youtube you would need to go to [Google Cloud](https://console.cloud.google.com/) and create an account if you dont already have one
-- Create a Project
-![Google Cloud Projecrt](https://github.com/ebelious/Self-Hosted/blob/main/Images/Screenshot%20from%202024-07-12%2016-31-29.png)
+If you want to integrate this with Google, Claude, or Youtube, you would need to get the API keys at this point before running the configuration
+- For Google and Youtube you would need to go to [Google Cloud](https://console.cloud.google.com/) and create an account if you dont already have one
+- Create a Project in Google Cloud
+![Google Cloud Project](https://github.com/ebelious/Self-Hosted/blob/main/Images/Screenshot%20from%202024-07-12%2016-31-29.png)
+- On the project dashboard, click Explore & Enable APIs and select `YouTube Data API v3`. Enable this API and and create the credentials. Save the API key, and you also do this same thing for google. You can use the same project.
 
-
+After you collect the API keys you run this:
 ```
 fabric --setup
 ```
