@@ -50,8 +50,21 @@ fabric --setup
 ```
 ## Using fabric
 
-yt transcript YOUTUBE LINK | \
+See the list of models currently on the system
+```
+fabric --listmodels
+```
+
+Specify the Default Model
+
+```
+fabric --changeDefaultModel llama3:latest
+```
+
+#### Example 1:
+yt --transcript https://youtu.be/UbDyjIIGaxQ | fabric --model llama3:latest -sp extract_wisdom
 
 Get Youtube Transcript by right-clicking CC on the video and selecting `Copy video URL`
 ![right-click](https://github.com/ebelious/Self-Hosted/blob/main/Images/Screenshot%20from%202024-07-12%2016-59-11.png)
+
 
