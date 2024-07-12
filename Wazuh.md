@@ -5,7 +5,7 @@ curl -sO https://packages.wazuh.com/4.8/wazuh-install.sh && sudo bash ./wazuh-in
 ```
 Once the assistant finishes the installation, the output shows the access credentials and a message that confirms that the installation was successful.
 
-
+```
 INFO: --- Summary ---
 INFO: You can access the web interface https://<wazuh-dashboard-ip>
     User: admin
@@ -13,11 +13,11 @@ INFO: You can access the web interface https://<wazuh-dashboard-ip>
 INFO: Installation finished.
 You now have installed and configured Wazuh.
 
-Access the Wazuh web interface with `https://<wazuh-dashboard-ip>` and your credentials:
+Access the Wazuh web interface with https://<wazuh-dashboard-ip> and your credentials:
 
-`Username: admin`
-`Password: <ADMIN_PASSWORD>`
-
+username: admin
+Password: <ADMIN_PASSWORD>
+```
 
 When you access the Wazuh dashboard for the first time, the browser shows a warning message stating that the certificate was not issued by a trusted authority. This is expected and the user has the option to accept the certificate as an exception or, alternatively, configure the system to use a certificate from a trusted authority.
 
