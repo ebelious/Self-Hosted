@@ -4,7 +4,7 @@ Another approach to using different Python versions is to use pyenv, a popular P
 
 1. Install pyenv by following the instructions in the official pyenv repository: [pyenv](https://github.com/pyenv/pyenv#installation)
    
-  curl https://pyenv.run | bash
+  `curl https://pyenv.run | bash`
 
 3. Install the desired Python versions using pyenv. For example, to install Python 3.9, run the following command:
 
