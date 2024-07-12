@@ -6,6 +6,8 @@ These are some Docs for the projects and tools I have been using
 - [Wazuh](https://github.com/ebelious/Self-Hosted/blob/main/Wazuh.md)
 - [Activate Windows Server](https://github.com/ebelious/Self-Hosted/blob/main/Activate%20Windows%20Server.md)
 - [Linux Enterprise Account]()
+- [WinRM HTTPS for Palo Alto](https://github.com/ebelious/Self-Hosted/blob/main/WinRM%20HTTPS%20for%20Palo%20Alto.md)
+
 ---
 
 ## Tools:
