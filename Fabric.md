@@ -21,3 +21,8 @@ cd fabric
 pipx install .
 ```
 May have to ensure path `pipx ensurepath`
+
+# Configure fabric
+```
+fabric --setup
+```
