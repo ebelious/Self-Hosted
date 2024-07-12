@@ -20,7 +20,7 @@ cd fabric
 ```
 pipx install .
 ```
-May have to ensure path `pipx ensurepath` and refresh terminal (open new terminal or `source .bashrc` or `source .zshrc`)
+May have to ensure path `pipx ensurepath` and refresh terminal (open new terminal or `source ~/.bashrc` or `source ~/.zshrc`)
 
 ## Configure fabric
 
@@ -48,3 +48,10 @@ You can now get the API to input into the fabric configuration
 ```
 fabric --setup
 ```
+## Using fabric
+
+yt transcript YOUTUBE LINK | \
+
+Get Youtube Transcript by right-clicking CC on the video and selecting `Copy video URL`
+![right-click](https://github.com/ebelious/Self-Hosted/blob/main/Images/Screenshot%20from%202024-07-12%2016-59-11.png)
+
