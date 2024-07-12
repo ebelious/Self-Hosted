@@ -1,6 +1,6 @@
 This is a terminal muklti plexer akin to tmux
-  - [Zellij](https://github.com/zellij-org/zellij) \n
-  - [Docs](https://zellij.dev/documentation/configuration.html) \n
+  - [Zellij GitHub](https://github.com/zellij-org/zellij)
+  - [Docs](https://zellij.dev/documentation/configuration.html)
   
 ## Installation
   ```bash <(curl -L zellij.dev/launch)```
