@@ -19,3 +19,4 @@ cd fabric
 ```
 pipx install .
 ```
+May have to ensure path `pipx ensurepath`
