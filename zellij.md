@@ -9,7 +9,7 @@ This is a terminal muklti plexer akin to tmux
     [Download](https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz) (link from Official - https://zellij.dev/)
   - Move/Copy the binary to the `/usr/bin/`or `~/.local/bin/`
 
-## Run Zelij
+## Run Zellij
 Command: `zellij`
 
 Change colors:  zellij options --theme [NAME]<br/>
