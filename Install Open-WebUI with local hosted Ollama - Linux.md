@@ -138,4 +138,9 @@ nano /home/USER/.config/autostart/stable-diffusion-start.sh
 ```
 /home/USER/stable-diffusion-webui/webui.sh --listen --api --api-auth user:password > /dev/null &
 ```
+```
+chmod +x /home/USER/.config/autostart/stable-diffusion-start.sh
+```
+
+When you log in this should suto start, and you can generate images in Ollama with no issues
 
