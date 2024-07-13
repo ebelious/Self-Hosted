@@ -37,8 +37,6 @@ server3 ansible_host=203.0.113.113
 ansible_python_interpreter=/usr/bin/python3
 ```
 
----
-
 ## Generate SSH Keys for remote authentication
 
 Enter the command to generate a key in the ed25519 key type with a comment for the key. (No Password - just hit enter)
