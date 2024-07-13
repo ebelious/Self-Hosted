@@ -1,3 +1,4 @@
+This is a setup where I have all of this installed on a local desktop (Fedora 40)
 
 ## 0: Prereqs
 
@@ -142,5 +143,5 @@ nano /home/USER/.config/autostart/stable-diffusion-start.sh
 chmod +x /home/USER/.config/autostart/stable-diffusion-start.sh
 ```
 
-When you log in this should suto start, and you can generate images in Ollama with no issues
+When you log in this should auto start, and you can generate images in Ollama with no issues
 
