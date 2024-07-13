@@ -16,7 +16,7 @@ Test in the CLI to verify this installed correctly
 	ollama run llama3 
 ** This is a test using the llama3 model, you can use other models https://ollama.com/library
 
-If you are using a Nvidia GPU, use this to verify the GPU is being used with ollama, should see ***ollama_llama_server*** in the nvidia-smi display when ollama is being used
+If you are using a Nvidia GPU, use this to verify the GPU is being used with ollama. You should see ***ollama_llama_server*** in the nvidia-smi display when ollama is being used
 
 	watch -n 0.5 nvidia-smi
 
