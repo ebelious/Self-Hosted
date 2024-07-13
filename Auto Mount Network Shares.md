@@ -1,4 +1,4 @@
-Auto Mount SMB Share on Boot
+Auto-Mount SMB Share on Boot
 - Make a mount directory on the system for the SMB share to mount to 
 - modify `/etc/fstab`
 
