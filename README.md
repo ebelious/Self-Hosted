@@ -8,7 +8,7 @@
 
 #
 ## Projects: 
-- [Ollama / Stable-Diffusion / Open-WebUI / Opendai](https://github.com/ebelious/Self-Hosted/blob/main/Install%20Open-WebUI%20with%20local%20hosted%20Ollama%20-%20Linux.md)
+- [Ollama / Stable-Diffusion / Open-WebUI / Opendai-speech](https://github.com/ebelious/Self-Hosted/blob/main/Install%20Open-WebUI%20with%20local%20hosted%20Ollama%20-%20Linux.md)
 - [Fabric](https://github.com/ebelious/Self-Hosted/blob/main/Fabric.md)
 - [Wazuh](https://github.com/ebelious/Self-Hosted/blob/main/Wazuh.md)
 - [Activate Windows Server](https://github.com/ebelious/Self-Hosted/blob/main/Activate%20Windows%20Server.md)
