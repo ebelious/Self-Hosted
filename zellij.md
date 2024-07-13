@@ -12,5 +12,5 @@ This is a terminal muklti plexer akin to tmux
 ## Run Zelij
 Command: `zellij`
 
-Change colors:  zellij options --theme [NAME]
+Change colors:  zellij options --theme [NAME]<br/>
 ```zellij options --theme dracula```
