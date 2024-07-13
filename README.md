@@ -23,6 +23,3 @@ These are some Docs for the projects and tools I have been using
 - [Pyenv](https://github.com/ebelious/Self-Hosted/blob/main/pyenv.md) - Python enviroment and version control
 - [Zellij](https://github.com/ebelious/Self-Hosted/blob/main/zellij.md) - Terminal multi plexer
 
-<p align="right">
-<img width="200" height="300" src="https://media1.tenor.com/m/r0R0N3dI3kIAAAAd/dancing-cat-dance.gif">
-</p>
