@@ -19,5 +19,5 @@ The name of the files does not matter, but I like to have this as a hidden file.
 Make sure the directory matches the permissions of the UID and GID in the fstab file.
 ``chmod 0600 .smbcredentials``
 
-You can run this command to mount the drive(s) and referenfce fstab flie
+You can run this command to mount the drive(s) and reference fstab flie
 `sudo mount -a` 
