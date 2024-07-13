@@ -16,7 +16,7 @@ domain=example
 ```
 The name of the files does not matter, but I like to have this as a hidden file. You only want the user to be able to read,write to this file. There is no execution needed on this file.
 
-Make sure the directory matches the permissions of the UID nad GID in the fstab file.
+Make sure the directory matches the permissions of the UID and GID in the fstab file.
 ``chmod 0600 .smbcredentials``
 
 You can run this command to mount the drive(s) and referenfce fstab flie
