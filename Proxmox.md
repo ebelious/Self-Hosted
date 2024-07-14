@@ -75,10 +75,21 @@ Click on `Create VM` in the top right of the webUI
 
 #### Windows VM
 You need to download this [VirtIO Driver](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso) ISO to make windows VMs work in proxmox (will be used after the initial setup)
-- Give the VM a Name 
-- Select an ISO image that you would like to use and make sure the `Guest OS` type matches the ISO
+- Give the VM a Name
+- Click `Advanced` box to see the `start at boot` option
+- Select an ISO image that you would like to use and make sure the `Guest OS` type matches the ISO, and make sure the version is correct (10 or 11, ect..)
+- select scsi controller: `VirtIO SCSI single`
+- Click `Add additional drive for VirtIO drivers` option in the `OS` menu
+- Select the `UEFI` option in System > BIOS, then add the location for storage
+- Click `Qemu Agent` and also select `TPM v2.0` and select the storage for both ofd those options
+- In `scsi bus` would reccommended atleast 64G of disk space
+- Atleat 2 CPUs (Cores), then in the `Type`select `host` 
+- Atleast 4g of RAM
+- Verify configuration and select `start after created` if you want the vm to boot when you are done the configuration
 
+This should be all you need to create awindows VM - there is a way to add a NVidia GPU to this VM (Showing you how to add PCI/GPU passthrough below)
 
+## Create backups using Proxmox Backup Server 
 
 ## Proxmox Helper scripts (I use this for docker containers)
 These are some script to assist in creating services on proxmox from [tteck.](https://tteck.github.io/Proxmox/)
