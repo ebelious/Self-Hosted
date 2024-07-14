@@ -1,6 +1,6 @@
 This is a setup where I have all of this installed on a local desktop (Fedora 40)
 
-## 0: Prereqs
+## Prereqs
 
 - Verify the system is up to date (apt, dnf, ect)
 - Verify Docker is installed
@@ -21,7 +21,7 @@ If you are using a Nvidia GPU, use this to verify the GPU is being used with oll
 
 	watch -n 0.5 nvidia-smi
 
-## 2: Install Open WebUI with openedai-speech integration
+## Install Open WebUI with openedai-speech integration
 
 These commands will generate 2 docker containers (May need to use sudo)
 - Opendai-speech
@@ -33,7 +33,7 @@ These commands will generate 2 docker containers (May need to use sudo)
 	docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 
 
-## 3: Configure Open WebUI to use openedai-speech 
+## Configure Open WebUI to use openedai-speech 
 
 This info can be seen at https://docs.openwebui.com/tutorial/openedai-speech-integration
 
