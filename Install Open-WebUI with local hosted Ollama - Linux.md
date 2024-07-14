@@ -50,7 +50,7 @@ Under `TTS Voice` within the same audio settings menu in the admin panel, you 
 
 - `tts-1` or `tts-1-hd`: `alloy`, `echo`, `echo-alt`, `fable`, `onyx`, `nova`, and `shimmer` (`tts-1-hd` is configurable; uses OpenAI samples by default)
 
-## 4: Stable Diffusion Integration
+## Stable Diffusion Integration
 This is the Official GitHub https://github.com/AUTOMATIC1111/stable-diffusion-webui
 
 #### Dependencies needed:
