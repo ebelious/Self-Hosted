@@ -41,7 +41,7 @@ Select `Deploy New Agent`. This will bring up a bnew screen where you can pick a
 
 You will fill out the following to get the comand to execute below on the hosts
 
-- Server address: This is the WAzuh management server you would like the agent to comuniucate with
+- Server address: This is the Wazuh management server you would like the agent to comuniucate with
 - Optional settings: This is where you enter the agent name and endpoint group
 
 After you fill out the informartion in these sections the commnand is displayed 
