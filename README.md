@@ -27,3 +27,6 @@
 - [Zellij](https://github.com/ebelious/Self-Hosted/blob/main/zellij.md) - Terminal multi plexer
 
 
+#
+## Other:
+[DOT and Configs]()
