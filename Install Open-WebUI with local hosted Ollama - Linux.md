@@ -5,7 +5,7 @@ This is a setup where I have all of this installed on a local desktop (Fedora 40
 - Verify the system is up to date (apt, dnf, ect)
 - Verify Docker is installed
 
-## 1: Install Ollama
+## Install Ollama
 
 Go to the official Ollama website and run the following command as they klist in the Download secrion https://ollama.com/download
 
