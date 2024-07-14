@@ -29,4 +29,4 @@
 
 #
 ## Other:
-[DOT and Configs]()
+[Dot and Configs]()
