@@ -29,5 +29,5 @@
 
 #
 ## Other:
-- [Dot and Configs]()
+- [Dot and Configs](https://github.com/ebelious/Self-Hosted/tree/main/Config_Files)
 - [Wallpapers]()
