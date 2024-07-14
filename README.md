@@ -30,4 +30,4 @@
 #
 ## Other:
 - [Dot and Configs](https://github.com/ebelious/Self-Hosted/tree/main/Config_Files)
-- [Wallpapers]()
+- [Wallpapers](https://github.com/ebelious/Self-Hosted/tree/main/Wallpapers)
