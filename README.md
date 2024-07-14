@@ -29,5 +29,5 @@
 
 #
 ## Other:
-[Dot and Configs]()
-[Wallpapers]()
+- [Dot and Configs]()
+- [Wallpapers]()
