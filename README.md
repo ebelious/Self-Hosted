@@ -3,7 +3,13 @@
 </p>
 
 <p align="center">
-<img width="35" height="35"src="https://github.com/user-attachments/assets/c85b65fa-a129-4ad9-afa0-6dbf0f9d1978"> These are some Docs I created for the projects and useful tools I have been using <img width="35" height="35"src="https://github.com/user-attachments/assets/2ff7e1e4-dc77-4f49-8ff3-b81171fdc879">
+<img width="35" height="35"src="https://github.com/user-attachments/assets/c85b65fa-a129-4ad9-afa0-6dbf0f9d1978"> _These are some Docs I created for the projects and useful tools I have been using_ <img width="35" height="35"src="https://github.com/user-attachments/assets/c85b65fa-a129-4ad9-afa0-6dbf0f9d1978">
+</p>
+<p align="center">
+<img width="35" height="35"src="https://github.com/user-attachments/assets/2ff7e1e4-dc77-4f49-8ff3-b81171fdc879"> _And other things_ <img width="35" height="35"src="https://github.com/user-attachments/assets/2ff7e1e4-dc77-4f49-8ff3-b81171fdc879">
+</p>
+<p align="center">
+>_
 </p>
 
 #
