@@ -30,3 +30,4 @@
 #
 ## Other:
 [Dot and Configs]()
+[Wallpapers]()
