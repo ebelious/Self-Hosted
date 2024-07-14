@@ -22,6 +22,64 @@ Verify the configurations and then **Install!**
 Navigate to this url with the IP you configured for the server `https://IP_ADDRESS:8006`
 
 ## Configure the community repositories
+Go to the proxmox shell option and login. Use this command to add the proxmox community repo
+
+Via CLI:
+```
+echo "deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription" >> /etc/apt/sources.list`
+```
+Via WebUI:
+
+Navigate to `Upgrades` > `Repositores` and click `Add`. In this Respository drop down menu select `No-Subscription`
+
+You can either update proxmox through the shell or through the webUI
+
+If youre not the `root` user run this
+```
+sudo apt update && sudo apt upgrade -y
+```
+Or you can go to the proxmox host in the left menu and navigate to `Updates` and click `Refresh` to update the repositories and then click `Upgrade` to upgrade the packages. <br />
+  *When you see `TASK OK` in the window pop-up, the update has completed and can be closed*
+
+You will then be able to get proxmox updates if you do not pay for proxmox
+
+## Upload ISOs to Proxmox
+Navigate to `Proxmox host` >`local` storage and you will see a `ISO Images` option in the menu. Here you can add locally, add by URL, or remove the images. 
+
+#### Download Links: <br />
+[Debian](https://www.debian.org/download) <br />
+[Ubuntu](https://ubuntu.com/download) <br />
+[Alpine](https://alpinelinux.org/downloads/)  <br />
+[Rocky](https://rockylinux.org/download) <br />
+[Arch](https://archlinux.org/download/) <br />
+[Fedora](https://fedoraproject.org/) <br />
+[Windows Server 2022](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022) <br />
+[Windows Server 2019](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019)<br />
+[Windows 11 Desktop](https://www.microsoft.com/software-download/windows11)<br />
+[Windows 10 Desktop](https://www.microsoft.com/en-us/software-download/windows10ISO)<br />
+[VirtIO Driver](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso) - **Is needed for Windows Vms** <br />
+
+[TrueNAS Scale](https://www.truenas.com/download-truenas-scale/) <br />
+[TrueNAS Core](https://www.truenas.com/download-truenas-core/)<br />
+
+
+## Install a VM
+
+#### Linux VM
+Click on `Create VM` in the top right of the webUI 
+- Click `Advanced` box to see the `start at boot` option
+- Give the VM a Name 
+- Select an ISO image that you would like to use and make sure the `Guest OS` type matches the ISO
+- The amount of disk space, RAM, and CPUs will depend on what the server will be used for. I reccomend inspecting the projects documentation for hardware requirements
+- Verify configuration and select `start after created` if you want the vm to boot when you are done the configuration
+
+#### Windows VM
+You need to download this [VirtIO Driver](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso) ISO to make windows VMs work in proxmox (will be used after the initial setup)
+- Give the VM a Name 
+- Select an ISO image that you would like to use and make sure the `Guest OS` type matches the ISO
 
 
 
+## Proxmox Helper scripts (I use this for docker containers)
+These are some script to assist in creating services on proxmox from [tteck.](https://tteck.github.io/Proxmox/)
+- You run these in the proxmox host shell
