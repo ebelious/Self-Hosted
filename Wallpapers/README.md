@@ -74,3 +74,7 @@
 ![37](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/minimal-world-8k-jl.jpg)
 
 ![38](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/2AZpvs8.jpeg)
+
+![39](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/a_beach_with_palm_trees_and_a_moon.png)
+
+![40](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/a_narrow_street_with_shops_and_signs.png)
