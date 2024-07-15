@@ -67,6 +67,6 @@
 
 ![34](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/wp8103002-pc-4k-aesthetic-wallpapers.jpg)
 
-
+![35](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/anime-minimal-girl-on-stairs.png)
 
 
