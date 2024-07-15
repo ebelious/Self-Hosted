@@ -19,7 +19,9 @@ Start the system and boot from the USB and when the splash page loads select the
 
 Verify the configurations and then **Install!**
 
-Navigate to this url with the IP you configured for the server `https://IP_ADDRESS:8006`
+Navigate to this url with the IP you configured for the server `https://IP_ADDRESS:8006` <br />
+** **Note: If you are using the root user to sign in, you need to have the realm be `Linux Pam standard authentication`**
+
 
 ## Configure the community repositories
 Go to the proxmox shell option and login. Use this command to add the proxmox community repo
@@ -83,13 +85,37 @@ You need to download this [VirtIO Driver](https://fedorapeople.org/groups/virt/v
 - Select the `UEFI` option in System > BIOS, then add the location for storage
 - Click `Qemu Agent` and also select `TPM v2.0` and select the storage for both ofd those options
 - In `scsi bus` would reccommended atleast 64G of disk space
-- Atleat 2 CPUs (Cores), then in the `Type`select `host` 
+- Atleat 2 CPUs (Cores), then in the `Type:`select `host` 
 - Atleast 4g of RAM
 - Verify configuration and select `start after created` if you want the vm to boot when you are done the configuration
 
 This should be all you need to create awindows VM - there is a way to add a NVidia GPU to this VM (Showing you how to add PCI/GPU passthrough below)
 
 ## Create backups using Proxmox Backup Server 
+You need to Download the [Proxmox Backup Server](https://www.proxmox.com/en/downloads) and it is reccommended that you do not have the server on the host that you are backing up
+The steps for installing the backup server are pretty much the same as the proxmox VE.
+
+#### Update and upgrade Server 
+- Navigate to `Administration` > `Repositories` and then click `Add` and select the `No-Subscription` option in the drop down menu
+- Navigate to `Administration` > `Updates` and `Refresh` the repositories. Then select `Upgrade` to upgrade the packages
+
+#### Create backup storage space
+- Navigate to Storage / Disks amd select `Directory`
+- Select an unused Disk and select the disk formate, and give this a name. Set this as a datastore
+
+#### Create a backup user
+- Navigate to `Acess Control` and create a user by clicking `add`. This will only be going to be used for backups. I make a user named `backup`.
+- Navigate to `Acess Control` > `Permissions` and click `Add` > `User Permission` and select the datastore that was created previously, and set the permissions to `Datastore Admin`
+- On the Dashboard click the `Show Fingerprint` on the top of the screen, and keep this as we will need to enter this in proxmox VE.
+
+Go to the Proxmox VE installation and navigate to `Datacenter > Storage`. Click the `Add` button and select `Proxmox Backup Server`.
+- Give this a name (`ID`)
+- Put the proxmox backup server IP in he `server` section
+- set the username nad password sections to the backup user that was created on the proxmox backup server
+- copy/paste the fingerprint from the proxmox backup server in the `Fingerprint` section
+- Enter the name of the datastore that was created on the proxmox backup server 
+
+Navigate to the `Backup` tab in the menu and click `Add`. here you can specify what, when, where and how to back up the VMs. You can set the retention of the backups and intervals.
 
 ## Proxmox Helper scripts (I use this for docker containers)
 These are some script to assist in creating services on proxmox from [tteck.](https://tteck.github.io/Proxmox/)
