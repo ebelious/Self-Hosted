@@ -72,3 +72,5 @@
 ![36](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/wallpaperflare.com_wallpaper%20(1).jpg)
 
 ![37](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/minimal-world-8k-jl.jpg)
+
+![38](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/2AZpvs8.jpeg)
