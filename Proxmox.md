@@ -58,7 +58,7 @@ Navigate to `Proxmox host` >`local` storage and you will see a `ISO Images` opti
 [Windows 11 Desktop](https://www.microsoft.com/software-download/windows11)<br />
 [Windows 10 Desktop](https://www.microsoft.com/en-us/software-download/windows10ISO)<br />
 [VirtIO Driver](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso) - **Is needed for Windows Vms** <br />
-[OSX](https://github.com/luchina-gabriel/OSX-PROXMOX)
+[OSX](https://github.com/luchina-gabriel/OSX-PROXMOX)<br />
 [TrueNAS Scale](https://www.truenas.com/download-truenas-scale/) <br />
 [TrueNAS Core](https://www.truenas.com/download-truenas-core/)<br />
 
