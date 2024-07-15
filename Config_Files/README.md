@@ -19,5 +19,5 @@ sudo dnf install fastfetch
 **Prereqs:**
 - Conky: `sudo apt install conky`, `sudo dnf install conky`
 - Sensors: `sudo apt install lm_sensors`, `sudo dnf install lm_sensors`
-- Icons: `https://www.deviantart.com/stash/01rs0v64gfd7`. Put thes in a font folder such as `~/.local/share/fonts/`
+- Icons: `https://www.deviantart.com/stash/01rs0v64gfd7`. Put these in a font folder such as `~/.local/share/fonts/`
 
