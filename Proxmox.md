@@ -45,7 +45,7 @@ You will then be able to get proxmox updates if you do not pay for proxmox
 ## Upload ISOs to Proxmox
 Navigate to `Proxmox host` >`local` storage and you will see a `ISO Images` option in the menu. Here you can add locally, add by URL, or remove the images. 
 
-#### ISO Download Links: <br />
+#### Some ISO Download Links: <br />
 [Debian](https://www.debian.org/download) <br />
 [Ubuntu](https://ubuntu.com/download) <br />
 [Alpine](https://alpinelinux.org/downloads/)  <br />
