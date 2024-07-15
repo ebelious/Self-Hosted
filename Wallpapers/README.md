@@ -69,4 +69,4 @@
 
 ![35](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/anime-minimal-girl-on-stairs.png)
 
-
+![36](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/wallpaperflare.com_wallpaper%20(1).jpg)
