@@ -1,4 +1,4 @@
-## Some Dot and Config files
+## Some dot and config files
 
 #### Fastfetch
 
