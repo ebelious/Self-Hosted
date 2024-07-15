@@ -23,7 +23,7 @@
 - [Auto Mount Network Shares](https://github.com/ebelious/Self-Hosted/blob/main/Auto%20Mount%20Network%20Shares.md)
 - [Ansible](https://github.com/ebelious/Self-Hosted/blob/main/Ansible.md)
 - [Gaming / Nvidia Drivers](https://github.com/ebelious/Self-Hosted/blob/main/Gaming.md)
-- [Proxmox / Backup / GPU Passthrough/ Users and Permissions](https://github.com/ebelious/Self-Hosted/blob/main/Proxmox.md)
+- [Proxmox / Backup / GPU Passthrough / Users and Permissions](https://github.com/ebelious/Self-Hosted/blob/main/Proxmox.md)
   
 #
 ## Tools:
