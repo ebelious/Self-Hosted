@@ -82,3 +82,5 @@
 ![41](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/eh72jrt1sxz31.jpg)
 
 ![42](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/riverthroughthevalley.png)
+
+![43](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/CuteCat.png)
