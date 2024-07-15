@@ -1,12 +1,10 @@
 # This is a Guide for Proxmox insallation
-
 Proxmox is a type 1 hypervisor akin to vmware esxi. This guide will show how to do basic configurations, GPU / PCI passthrough, taking backups, and creating users and giving permissions.
 
 ## How to install Proxmox
 Go to [Proxmoxs](https://www.proxmox.com/en/downloads) website and download the ISO
 
 #### Create Boot Disk
-
 Make a bootable USB drive using a software like [Rufus](https://rufus.ie/en/) or [Belena Etcher](https://etcher.balena.io/)
 
 Make sure that virtualization is configured in UEFI/BIOS settings, if this is not enable this will not work
@@ -21,7 +19,6 @@ Verify the configurations and then **Install!**
 
 Navigate to this url with the IP you configured for the server `https://IP_ADDRESS:8006` <br />
 ** **Note: If you are using the root user to sign in, you need to have the realm be `Linux Pam standard authentication`**
-
 
 ## Configure the community repositories
 Go to the proxmox shell option and login. Use this command to add the proxmox community repo
@@ -63,7 +60,6 @@ Navigate to `Proxmox host` >`local` storage and you will see a `ISO Images` opti
 
 [TrueNAS Scale](https://www.truenas.com/download-truenas-scale/) <br />
 [TrueNAS Core](https://www.truenas.com/download-truenas-core/)<br />
-
 
 ## Install a VM
 
@@ -117,6 +113,8 @@ Go to the Proxmox VE installation and navigate to `Datacenter > Storage`. Click 
 
 Navigate to the `Backup` tab in the menu and click `Add`. here you can specify what, when, where and how to back up the VMs. You can set the retention of the backups and intervals.
 
-## Proxmox Helper scripts (I use this for docker containers)
+## PCI / GPU Passthrough
+
+## Proxmox Helper scripts
 These are some script to assist in creating services on proxmox from [tteck.](https://tteck.github.io/Proxmox/)
-- You run these in the proxmox host shell
+- You run these in the proxmox host shell, and the intructions are on the site
