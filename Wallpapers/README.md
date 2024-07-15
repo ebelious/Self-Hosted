@@ -80,3 +80,5 @@
 ![40](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/a_narrow_street_with_shops_and_signs.png)
 
 ![41](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/eh72jrt1sxz31.jpg)
+
+![42](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/riverthroughthevalley.png)
