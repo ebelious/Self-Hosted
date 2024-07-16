@@ -1,4 +1,4 @@
-[Markdown Guide](https://www.markdownguide.org/extended-syntax/#tables)
+[Markdown Guide](https://www.markdownguide.org/getting-started/)
 
 # Heading	 <br />
 # H1 
