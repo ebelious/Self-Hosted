@@ -10,9 +10,12 @@ DNS=10.1.1.18 172.17.0.2 1.1.1.1 1.0.0.1
 Domains=home.local
 ```
 Restart the service and verify the service statrus after restart 
-`sudo systemctl restart systemd-resolved.service` <br /> 
-`resolvectl status` <br /> 
-
+```
+sudo systemctl restart systemd-resolved.service
+```
+```
+resolvectl status
+```
 Make sure you have the dependencies for the AD connection 
   client-software: sssd
   required-package: sssd-common
