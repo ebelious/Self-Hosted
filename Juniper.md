@@ -48,8 +48,9 @@ If you enter the ssh shell as rooit, enter `cli` to go into JunOS Operational Mo
 #### How to check software version <br />
 `show software` <br />
 
+#### Cable diagnostics
 `request diagnostics tdr start interface [INTERFACE]` <br />
 `show diagnostics tdr interface [INTERFACE]` <br />
 
-See the device configuration in the `set` format <br />
+#### See the device configuration in the `set` format <br />
 `show configuration | display set`<br />
