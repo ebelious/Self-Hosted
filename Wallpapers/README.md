@@ -92,3 +92,5 @@
 ![46](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/wp10999271-cowboy-bebop-pc-wallpapers.jpg)
 
 ![47](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/demon-slayer-7680x4320.jpg)
+
+![48](8k_ultra_hd___wallpaper___theming_arts_by_themingarts_dfrqulx.png)
