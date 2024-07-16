@@ -88,3 +88,7 @@
 ![44](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/1328375.png)
 
 ![45](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/flowers.png)
+
+![46](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/wp10999271-cowboy-bebop-pc-wallpapers.jpg)
+
+![47](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/demon-slayer-7680x4320.jpg)
