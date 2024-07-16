@@ -25,8 +25,10 @@ Make sure you have the dependencies for the AD connection
   required-package: adcli
   required-package: samba-common-tools
 
-Add domain information to `/etc/krb5.conf` <be />
-`default_realm = HOME.LOCAL`
+Add domain information to `/etc/krb5.conf` <br />
+```
+default_realm = HOME.LOCAL
+```
 
 ```
 [realms]
