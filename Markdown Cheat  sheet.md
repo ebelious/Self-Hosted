@@ -30,7 +30,7 @@ Unordered List	 <br />
 - Second item
 - Third item
 #
-`Code`	 `` `code` `` <br />
+`Code`	 `` `Code` `` <br />
 #
 Horizontal Rule	`---` <br />
 
