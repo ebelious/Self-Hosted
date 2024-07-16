@@ -31,7 +31,7 @@
 - [Nerd Fonts](https://github.com/ebelious/Self-Hosted/blob/main/Nerd%20Fonts.md) - Many fonts and icons
 - [Pyenv](https://github.com/ebelious/Self-Hosted/blob/main/pyenv.md) - Python enviroment and version control
 - [Zellij](https://github.com/ebelious/Self-Hosted/blob/main/zellij.md) - Terminal multi plexer
-- [Mardown Guide](https://github.com/ebelious/Self-Hosted/blob/main/Markdown%20Cheat%20%20sheet.md)
+- [Mardown](https://github.com/ebelious/Self-Hosted/blob/main/Markdown%20Cheat%20%20sheet.md) - Guid on how to use markdown (.md)
 
 #
 ## Other:
