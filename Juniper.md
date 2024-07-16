@@ -52,4 +52,4 @@ If you enter the ssh shell as rooit, enter `cli` to go into JunOS Operational Mo
 `show diagnostics tdr interface [INTERFACE]` <br />
 
 See the device configuration in the `set` format <br />
-`show configuration | display set<br />
+`show configuration | display set`<br />
