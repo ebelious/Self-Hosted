@@ -71,17 +71,45 @@ Footnote	<br />
 `Here's a sentence with a footnote. [^1]` [^1] <br />
 [^1]: This is the footnote. 
 #
-Heading ID	### My Great Heading {#custom-id} <br />
-
-Definition List	term<br />
-`: definition`
+Heading ID<br />	
+### My Great Heading {#custom-id} <br />
+Html<br />
+`<h3 id="custom-id">My Great Heading</h3>`
+<h3 id="custom-id">My Great Heading</h3>
+#
+`First Term
+: This is the definition of the first term.`<br />
+This Is Definition 
 : definition
-Strikethrough	~~The world is flat.~~
-Task List	- [x] Write the press release
+
+#
+Strikethrough	 <br />
+`~~Text~~` <br />
+~~The world is flat.~~ <br />
+#
+Task List	<br />
+`- [x] Write the press release`
 - [ ] Update the website
 - [ ] Contact the media
-Emoji
-(see also Copying and Pasting Emoji)	That is so funny! :joy:
-Highlight	I need to highlight these ==very important words==.
-Subscript	H~2~O
-Superscript	X^2^
+#
+Emoji <br />
+`That is so funny! :joy:`
+(see also Copying and Pasting Emoji)<br />	
+That is so funny! :joy:
+#
+Highlight	I need to highlight these ==very important words== <br />
+`==very important words== `<br />
+<mark>very important words</mark> <br />
+`<mark>very important words</mark>`<br />
+
+
+#
+Subscript	H~2~O <br />
+`Subscript	H~2~O` <br />
+Subscript <sub>H~2~O</sub>  <br />
+`<sub>Subscript	H~2~O</sub>` (GitHub) <br />
+#
+Superscript	X^2^ <br />
+`Superscript	X^2^`  <br />
+Superscript	X<sup>2</sup> <br />
+`Superscript	X<sup>2</sup>` <br />
