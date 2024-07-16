@@ -104,7 +104,7 @@ Highlight	I need to highlight these ==very important words== <br />
 Subscript	H~2~O <br />
 `Subscript	H~2~O` <br />
 Subscript <sub>H~2~O</sub>  <br />
-`<sub>Subscript	H~2~O</sub>` (GitHub) <br />
+`<sub>Subscript	H~2~O</sub>`<br />
 #
 Superscript	X^2^ <br />
 `Superscript	X^2^`  <br />
