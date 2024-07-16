@@ -23,7 +23,7 @@ If you enter the ssh shell as rooit, enter `cli` to go into JunOS Operational Mo
 `set interfaces em0 unit 0 family inet address address/prefix-length` <br />
 
 #### Configure DNS server <br />
-`> set system name-server address` <br />
+`set system name-server address` <br />
 
 #### Commit the changes on the device <br />
 `commit` <br />
