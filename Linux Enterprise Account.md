@@ -1,4 +1,4 @@
-Change hostname of device to include the domain of the AD 
+Change hostname of device to include the domain of the AD (use your own domain info)
 
 - ex: hostname.home.local
 	`sudo hostnamectl set-hostname <hostname>`
