@@ -44,10 +44,7 @@ Image	`![alt text](image.jpg)` ** can use URLs in the () <br />
 ![alt text](https://github.com/ebelious/Self-Hosted/blob/main/Images/fedora%20Cat.png)
 
 #
-Extended Syntax
-These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.
-
-Element	Markdown Syntax
+Tables
 ```
 | First Header  | Second Header |
 | ------------- | ------------- |
