@@ -24,7 +24,7 @@
 - [Ansible](https://github.com/ebelious/Self-Hosted/blob/main/Ansible.md)
 - [Gaming / Nvidia Drivers](https://github.com/ebelious/Self-Hosted/blob/main/Gaming.md)
 - [Proxmox / Backup / GPU Passthrough / Users and Permissions](https://github.com/ebelious/Self-Hosted/blob/main/Proxmox.md)
-- [Juniper](https://github.com/ebelious/Self-Hosted/blob/main/Juniper.md) 
+
 #
 ## Tools:
 
@@ -32,7 +32,8 @@
 - [Pyenv](https://github.com/ebelious/Self-Hosted/blob/main/pyenv.md) - Python enviroment and version control
 - [Zellij](https://github.com/ebelious/Self-Hosted/blob/main/zellij.md) - Terminal multi plexer
 - [Markdown](https://github.com/ebelious/Self-Hosted/blob/main/Markdown%20Cheat%20%20sheet.md) - Guide/cheatsheet on how to use markdown (.md)
-
+- [Juniper](https://github.com/ebelious/Self-Hosted/blob/main/Juniper.md) - Guide/cheatsheet for Juniper
+  
 #
 ## Other:
 - [Dot and Configs](https://github.com/ebelious/Self-Hosted/tree/main/Config_Files)
