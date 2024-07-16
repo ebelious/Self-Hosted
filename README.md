@@ -24,7 +24,7 @@
 - [Ansible](https://github.com/ebelious/Self-Hosted/blob/main/Ansible.md)
 - [Gaming / Nvidia Drivers](https://github.com/ebelious/Self-Hosted/blob/main/Gaming.md)
 - [Proxmox / Backup / GPU Passthrough / Users and Permissions](https://github.com/ebelious/Self-Hosted/blob/main/Proxmox.md)
-  
+- [Juniper]() 
 #
 ## Tools:
 
