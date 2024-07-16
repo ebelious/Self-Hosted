@@ -43,4 +43,4 @@ Join the host to the server
 
 You can add domain user accounts to the host 
 
-GUI:  Settings > System > Users > Add Enterprise User
+GUI:(Gnome)  `Settings` > `System` > `Users` > `Add Enterprise User`
