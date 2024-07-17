@@ -34,7 +34,8 @@
 - [Markdown](https://github.com/ebelious/Self-Hosted/blob/main/Markdown%20Cheat%20%20sheet.md) - Guide/cheatsheet on how to use markdown (.md)
 - [Juniper](https://github.com/ebelious/Self-Hosted/blob/main/Juniper.md) - Guide/cheatsheet for Juniper Devices
 - [Palo Alto](https://github.com/ebelious/Self-Hosted/blob/main/Palo%20Alto.md) - Guide/cheatsheet for Palo Alto Devices
-- [Bash](https://github.com/ebelious/Self-Hosted/blob/main/Bash.md) - References and guides for bash scripting 
+- [Bash](https://github.com/ebelious/Self-Hosted/blob/main/Bash.md) - References and guides for bash scripting
+- [lsd](https://github.com/lsd-rs/lsd) - Delux ls command - shows icons
 #
 ## Other:
 - [Dots and Configs](https://github.com/ebelious/Self-Hosted/tree/main/Config_Files) - files and some references
