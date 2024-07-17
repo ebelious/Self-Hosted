@@ -31,7 +31,11 @@
       "key": "  ",
       "keyColor": "yellow"
     },
-    "break",
+    {
+      "type": "colors",
+      "paddingLeft": 10,
+      "symbol": "diamond"
+    },
     {
       "type": "host",
       "key": "  ",
