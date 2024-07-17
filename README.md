@@ -33,6 +33,7 @@
 - [Zellij](https://github.com/ebelious/Self-Hosted/blob/main/zellij.md) - Terminal multi plexer
 - [Markdown](https://github.com/ebelious/Self-Hosted/blob/main/Markdown%20Cheat%20%20sheet.md) - Guide/cheatsheet on how to use markdown (.md)
 - [Juniper](https://github.com/ebelious/Self-Hosted/blob/main/Juniper.md) - Guide/cheatsheet for Juniper Devices
+- [Palo Alto](https://github.com/ebelious/Self-Hosted/blob/main/Palo%20Alto.md) - Guide/cheatsheet for Palo Alto Devices
 - [Bash](https://github.com/ebelious/Self-Hosted/blob/main/Bash.md) - References and guides for bash scripting 
 #
 ## Other:
