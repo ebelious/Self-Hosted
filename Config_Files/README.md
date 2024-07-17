@@ -36,3 +36,14 @@ PS1='\[$(tput sc; rightprompt; tput rc)\]\w\n\e[1;32m[\e[0m\e[1;36m>\e[0m\e[1;32
 ```
 
 ![Prompt](https://github.com/ebelious/Self-Hosted/blob/main/Images/Screenshot%20from%202024-07-17%2010-40-18.png)
+
+## Gnome Terminal Themes
+<p align="center">
+<img width="500" height="200" src="https://raw.githubusercontent.com/Gogh-Co/Gogh/master/images/gogh/Gogh-logo-dark.png">
+</p>
+
+##### [Gogh](https://gogh-co.github.io/Gogh/)
+You can pull a single theme or all of the themes if you are insane
+```
+bash -c  "$(wget -qO- https://git.io/vQgMr)" 
+```
