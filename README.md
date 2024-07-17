@@ -37,5 +37,5 @@
 - [Bash](https://github.com/ebelious/Self-Hosted/blob/main/Bash.md) - References and guides for bash scripting 
 #
 ## Other:
-- [Dot and Configs](https://github.com/ebelious/Self-Hosted/tree/main/Config_Files) - files and some references
+- [Dots and Configs](https://github.com/ebelious/Self-Hosted/tree/main/Config_Files) - files and some references
 - [Wallpapers](https://github.com/ebelious/Self-Hosted/tree/main/Wallpapers)
