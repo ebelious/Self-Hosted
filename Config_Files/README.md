@@ -1,4 +1,4 @@
-
+# dot and config files oh my!
 ## Fastfetch
 `fastfetch` <br />
 `fastfetch -l none` (No Logo)
