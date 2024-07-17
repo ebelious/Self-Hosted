@@ -1,6 +1,10 @@
 Bash is an insteractive shell used mainly in unix operating systems. Here is some useful quick links to understand bash
 
+## Bash Cheatsheet 
 
+[devhints](https://devhints.io/bash)
+
+## Bash Guides
 [James Website](https://www.jpnc.info/category/bash.html)
 
 ### Introduction to Advanced Bash Usage - James Pannacciulli @ OSCON 2014
@@ -8,6 +12,14 @@ Bash is an insteractive shell used mainly in unix operating systems. Here is som
 
 ## .bashrc, .bash_profile, .profile
 
+- .bashrc contains commands that are specific to the Bash shells. Every interactive non-login shell reads .bashrc first. Normally .bashrc is the best place to add aliases and Bash related functions.
+
+- The .bash_profile file contains commands for setting environment variables. Consequently, future shells inherit these variables.
+
+- During an interactive shell login, if .bash_profile is not present in the home directory, Bash looks for .bash_login. If found, Bash executes it. If .bash_login is not present in the home directory, Bash looks for .profile and executes it.
+.profile can hold the same configurations as .bash_profile or .bash_login. It controls prompt appearance, keyboard sound, shells to open, and individual profile settings that override the variables set in the /etc/profile file.
+
+[Reference](https://www.baeldung.com/linux/bashrc-vs-bash-profile-vs-profile)
 
 ## Prompt: 
 Here are the different meanings for the different parts of the BASH prompt [PhoenixNAP](https://phoenixnap.com/kb/change-bash-prompt-linux):
