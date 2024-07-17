@@ -22,9 +22,9 @@ sudo dnf install fastfetch
 - Icons: `https://www.deviantart.com/stash/01rs0v64gfd7`. Put these in a font folder such as `~/.local/share/fonts/`
 
 ## Bash Prompt 
-[Bash](https://github.com/ebelious/Self-Hosted/blob/main/Bash.md)<br />
 This will print the time in the right column of the terminal<br />
-This also has the directory above the comman line (shorthand for home directory)
+This also has the directory above the comman line (shorthand for home directory) [Bash](https://github.com/ebelious/Self-Hosted/blob/main/Bash.md)<br />
+
 ```
 ## Time on right column prompt
 rightprompt()
