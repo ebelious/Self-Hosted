@@ -48,7 +48,7 @@ You can pull a single theme or all of the themes if you are insane
 bash -c  "$(wget -qO- https://git.io/vQgMr)" 
 ```
 ## lsd - Nextgen ls
-[github](https://github.com/lsd-rs/lsd)
+[Github](https://github.com/lsd-rs/lsd)
 ```
 sudo apt install lsd
 ```
