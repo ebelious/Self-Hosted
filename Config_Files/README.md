@@ -21,8 +21,8 @@ sudo dnf install fastfetch
 - Sensors: `sudo apt install lm_sensors`, `sudo dnf install lm_sensors`
 - Icons: `https://www.deviantart.com/stash/01rs0v64gfd7`. Put these in a font folder such as `~/.local/share/fonts/`
 
-## Bash Prompt
-
+## Bash Prompt 
+[Bash](https://github.com/ebelious/Self-Hosted/blob/main/Bash.md)
 This will print the time in the right column of the terminal
 This also has the directory above the comman line
 ```
