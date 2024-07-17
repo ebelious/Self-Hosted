@@ -10,6 +10,7 @@ sudo apt install fastfetch
 ```
 sudo dnf install fastfetch
 ```
+[Fastfetch JSON Schema](https://github.com/fastfetch-cli/fastfetch/wiki/Json-Schema)
 
 ## Conky
 
