@@ -1,3 +1,7 @@
+<p align="center">
+<img width="300" height="350" src="https://raw.githubusercontent.com/zellij-org/zellij/main/assets/logo.png">
+</p>
+
 This is a terminal muklti plexer akin to tmux
   - [Zellij GitHub](https://github.com/zellij-org/zellij)
   - [Docs](https://zellij.dev/documentation/configuration.html)
