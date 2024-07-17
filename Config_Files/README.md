@@ -24,7 +24,7 @@ sudo dnf install fastfetch
 ## Bash Prompt 
 [Bash](https://github.com/ebelious/Self-Hosted/blob/main/Bash.md)<br />
 This will print the time in the right column of the terminal<br />
-This also has the directory above the comman line
+This also has the directory above the comman line (shorthand for home directory)
 ```
 ## Time on right column prompt
 rightprompt()
