@@ -1,4 +1,5 @@
 Official GitHub: [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
+![nerfont logo](https://github.com/ryanoasis/nerd-fonts/blob/master/images/nerd-fonts-logo.svg)
 
 ## Install Nerd-Fonts
 ```
