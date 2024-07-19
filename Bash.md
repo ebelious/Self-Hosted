@@ -64,6 +64,7 @@ The first number in the color code specifies the typeface:
 ```
 0 – Normal
 1 – Bold (bright)
+3 - Italics
 2 – Dim
 4 – Underlined
 ```
