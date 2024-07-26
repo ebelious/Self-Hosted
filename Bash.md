@@ -21,6 +21,70 @@ Bash is an insteractive shell used mainly in unix operating systems. Here is som
 
 [Reference](https://www.baeldung.com/linux/bashrc-vs-bash-profile-vs-profile)
 
+## Bash Builtin Commands
+.
+:
+[
+alias
+bg
+bind
+break
+builtin
+caller
+cd
+command
+compgen
+complete
+compopt
+continue
+declare
+dirs
+disown
+echo
+enable
+eval
+exec
+exit
+export
+false
+fc
+fg
+getopts
+hash
+help
+history
+jobs
+kill
+let
+local
+logout
+mapfile
+popd
+printf
+pushd
+pwd
+read
+readarray
+readonly
+return
+set
+shift
+shopt
+source
+suspend
+test
+times
+trap
+true
+type
+typeset
+ulimit
+umask
+unalias
+unset
+wait
+
+
 ## Prompt: 
 Here are the different meanings for the different parts of the BASH prompt [PhoenixNAP](https://phoenixnap.com/kb/change-bash-prompt-linux):
 
