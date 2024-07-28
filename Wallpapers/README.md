@@ -93,3 +93,16 @@ Click on the image to download
 ![46](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/wp10999271-cowboy-bebop-pc-wallpapers.jpg)
 
 ![47](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/demon-slayer-7680x4320.jpg)
+
+![48](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/wallhaven-2e2xyx.jpg)
+
+![49](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/wall.jpg)
+
+![50](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/dgo7b0o-8e349770-38a4-4d60-97ec-6228ef238cbb.zip)
+
+![51]()
+
+![52]()
+
+![53]()
+
