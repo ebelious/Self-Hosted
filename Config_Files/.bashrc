@@ -94,9 +94,12 @@ alias gc='git clone'
 alias msf='msfconsole -q'
 
 
-## Basic prompt
+## Git Repo Prompt
 #
-export PS1="\[\e[2;36m\]\[\w\]\[\e[0m\]\[\n\]\[\e[0;32m[\]\[\e[0m\]\[\e[1;36m>\]\[\e[0m\]\[\e[0;32m]\]\[\e[0m\]\]\] " 
+#parse_git_branch()
+#{
+#  git rev-parse --abbrev-ref head 2> /dev/null
+#}
 
 ## Time on right column prompt
 #
@@ -105,6 +108,9 @@ export PS1="\[\e[2;36m\]\[\w\]\[\e[0m\]\[\n\]\[\e[0;32m[\]\[\e[0m\]\[\e[1;36m>\]
 #    printf "%*s" $COLUMNS "\[\e[0;32m[\e[0m\]$(date +%r)\[\e[0;32m]\e[0m\]"
 #}
 #export PS1="\[\n\]\[$(tput sc; rightprompt; tput rc)\]\[\e[2;36m\]\[\w\]\[\e[0m\]\[\n\]\[\e[0;32m[\]\[\e[0m\]\[\e[1;36m>\]\[\e[0m\]\[\e[0;32m]\]\[\e[0m\]\]\] "
+
+## Basic prompt                                                                                                                                                                                                                           │#                                                                                                                                                                                                                                         │
+export PS1="\[\n\]\[\e[2;36m\]\[\w\]\[\e[0m\]\[\n\]\[\e[0;32m[\]\[\e[0m\]\[\e[1;36m>\]\[\e[0m\]\[\e[0;32m]\]\[\e[0m\]\]\] "  
 
 
 ## pyenv variable
