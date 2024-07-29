@@ -1,25 +1,20 @@
-## .bashrc
-#
-## Source global definitions
-#
+# .bashrc
+
+# Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
-
-## User specific environment
-#
+# User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
-#export SYSTEMD_PAGER='most'
-
+# export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-#
 if [ -d ~/.bashrc.d ]; then
     for rc in ~/.bashrc.d/*; do
         if [ -f "$rc" ]; then
@@ -50,7 +45,6 @@ export GROFF_NO_SGR=1         # For Konsole and Gnome-terminal
 
 
 ## File extractor
-# ex- archive extractor
 #
 ex ()
 {
@@ -94,24 +88,32 @@ alias msf='msfconsole -q'
 
 ## Basic prompt
 #
-#export PS1="\e[0;32m[\e[0m\e[1;36m>\e[0m\e[0;32m]\e[0m"
+export PS1="\[\e[2;36m\]\[\w\]\[\e[0m\]\[\n\]\[\e[0;32m[\]\[\e[0m\]\[\e[1;36m>\]\[\e[0m\]\[\e[0;32m]\]\[\e[0m\]\]\] " 
 
 ## Time on right column prompt
 #
-rightprompt()
-{
-    printf "%*s" $COLUMNS "[$(date +%r)]"
-}
-PS1='\[$(tput sc; rightprompt; tput rc)\] \e[2;36m\w\e[0m\n\e[1;32m[\e[0m\e[1;36m>\e[0m\e[1;32m]\e[0m '
+#rightprompt()
+#{
+#    printf "%*s" $COLUMNS "\[\e[0;32m[\e[0m\]$(date +%r)\[\e[0;32m]\e[0m\]"
+#}
+#export PS1="\[\n\]\[$(tput sc; rightprompt; tput rc)\]\[\e[2;36m\]\[\w\]\[\e[0m\]\[\n\]\[\e[0;32m[\]\[\e[0m\]\[\e[1;36m>\]\[\e[0m\]\[\e[0;32m]\]\[\e[0m\]\]\] "
 
 
 ## pyenv variable
 #
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+#export PYENV_ROOT="$HOME/.pyenv"
+#[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
 
+## Start Zellij on Launch
+eval "$(zellij setup --generate-auto-start bash)"
 
 ## fastfetch header
 #
 fastfetch -l none
+
+# These are the Command-Center aliases
+alias sqlmap='python ~/Command-Center/sqlmap-dev/sqlmap.py'
+alias ccenter='~/Command-Center/command-center.sh'
+alias responder='python2.7 ~/Command-Center/Responder/Responder.py'
+alias ttyper='/home/eric@home.local/.cargo/bin/ttyper'
