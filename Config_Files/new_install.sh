@@ -20,7 +20,12 @@ sudo dnf update
 sudo dnf copr enable elxreno/preload
 
 # Installing my main packages
-sudo dnf install htop nmap timeshift bleachbit kitty preload fastfetch lsd fzf bat pipx lf trash-cli
+sudo dnf install htop nmap timeshift bleachbit kitty preload fastfetch lsd fzf bat pipx trash-cli
+
+# Install lf 
+curl https://github.com/gokcehan/lf/releases/download/r32/lf-linux-amd64.tar.gz
+tar -xf lf-linux-amd64.tar.gz
+cp lf ~/.local/bin/
 
 # Installing flatpaks
 flatpak install flathub com.valvesoftware.Steam
@@ -44,12 +49,12 @@ sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda
 sudo hostnamectl set-hostname [HOSTNAME]
 
 #### Configure resolved
-sudo echo "[Resolve]" >> /etc/systemd/resolved.conf
-sudo echo "DNS=10.1.1.18 172.17.0.2 1.1.1.1 1.0.0.1" >> /etc/systemd/resolved.conf
-sudo echo "Domains=home.local" >> /etc/systemd/resolved.conf
-sudo systemctl restart systemd-resolved.service
-resolvectl status
-sleep 3
+#sudo echo "[Resolve]" >> /etc/systemd/resolved.conf
+#sudo echo "DNS=10.1.1.18 172.17.0.2 1.1.1.1 1.0.0.1" >> /etc/systemd/resolved.conf
+#sudo echo "Domains=home.local" >> /etc/systemd/resolved.conf
+#sudo systemctl restart systemd-resolved.service
+#resolvectl status
+#sleep 3
 
 #### Configure kerberos
 sudo nano /etc/krb5.conf
@@ -70,10 +75,8 @@ cd $HOME
 # Install pyenv
 curl https://pyenv.run | bash
 
-# Installing LF terminal file manager
-curl -L https://github.com/gokcehan/lf/releases/latest/download/lf-linux-amd64.tar.gz | tar xzC ~/.local/bin
-
 # Installing Zellij terminal multi plexer
-curl -L https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz | tar xzC ~/.local/bin
+curl https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz
+tar xz zellij-x86_64-unknown-linux-musl.tar.gz && cp zellij ~/.local/bin
 
 
