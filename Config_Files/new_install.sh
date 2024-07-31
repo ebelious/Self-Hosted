@@ -10,8 +10,8 @@
 #
 
 # Making dnf faster
-sudo echo "max_parallel_downloads=10" >> /etc/dnf/dnf.conf
-sudo echo "fastestmirror=True" >> /etc/dnf/dnf.conf
+echo "max_parallel_downloads=10" | sudo tee -a /etc/dnf/dnf.conf
+echo "fastestmirror=True" | sudo tee -a /etc/dnf/dnf.conf
 
 # Installing updates
 sudo dnf update
@@ -49,12 +49,11 @@ sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda
 sudo hostnamectl set-hostname [HOSTNAME]
 
 #### Configure resolved
-#sudo echo "[Resolve]" >> /etc/systemd/resolved.conf
-#sudo echo "DNS=10.1.1.18 172.17.0.2 1.1.1.1 1.0.0.1" >> /etc/systemd/resolved.conf
-#sudo echo "Domains=home.local" >> /etc/systemd/resolved.conf
-#sudo systemctl restart systemd-resolved.service
-#resolvectl status
-#sleep 3
+echo "[Resolve]" | sudo tee -a /etc/systemd/resolved.conf
+echo "DNS=10.1.1.18 172.17.0.2 1.1.1.1 1.0.0.1" | sudo tee -a /etc/systemd/resolved.conf
+echo "Domains=home.local" | sudo tee -a /etc/systemd/resolved.conf
+sudo systemctl restart systemd-resolved.service
+resolvectl status
 
 #### Configure kerberos
 sudo nano /etc/krb5.conf
