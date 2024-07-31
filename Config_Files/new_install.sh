@@ -54,6 +54,7 @@ echo "DNS=10.1.1.18 172.17.0.2 1.1.1.1 1.0.0.1" | sudo tee -a /etc/systemd/resol
 echo "Domains=home.local" | sudo tee -a /etc/systemd/resolved.conf
 sudo systemctl restart systemd-resolved.service
 resolvectl status
+sleep 3
 
 #### Configure kerberos
 sudo nano /etc/krb5.conf
