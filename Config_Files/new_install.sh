@@ -77,6 +77,6 @@ curl https://pyenv.run | bash
 
 # Installing Zellij terminal multi plexer
 curl https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz
-tar xz zellij-x86_64-unknown-linux-musl.tar.gz && cp zellij ~/.local/bin
+tar -xf zellij-x86_64-unknown-linux-musl.tar.gz && cp zellij ~/.local/bin
 
 
