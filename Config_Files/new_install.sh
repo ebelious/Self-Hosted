@@ -38,11 +38,11 @@ flatpak install flathub com.mattjakeman.ExtensionManager
 flatpak install flathub com.rtosta.zapzap
 
 # Installing Nvidia Drivers
-sudo dnf install kernel-devel kernel-headers gcc make dkms acpid libglvnd-glx libglvnd-opengl libglvnd-devel pkgconfig
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf makecache
-sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda
+#sudo dnf install kernel-devel kernel-headers gcc make dkms acpid libglvnd-glx libglvnd-opengl libglvnd-devel pkgconfig
+#sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+#sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+#sudo dnf makecache
+#sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda
 
 # Make an Enterprise account
 #### Set device hostname
