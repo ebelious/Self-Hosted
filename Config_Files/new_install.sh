@@ -20,7 +20,7 @@ sudo dnf update
 sudo dnf copr enable elxreno/preload
 
 # Installing my main packages
-sudo dnf install htop nmap timeshift bleachbit kitty preload fastfetch lsd fzf bat pipx
+sudo dnf install htop nmap timeshift bleachbit kitty preload fastfetch lsd fzf bat pipx git
 
 # Install lf 
 curl https://github.com/gokcehan/lf/releases/download/r32/lf-linux-amd64.tar.gz
@@ -28,13 +28,13 @@ tar -xf lf-linux-amd64.tar.gz
 cp lf ~/.local/bin/
 
 # Installing flatpaks
-flatpak install flathub com.valvesoftware.Steam
-flatpak install flathub com.heroicgameslauncher.hgl
+#flatpak install flathub com.valvesoftware.Steam
+#flatpak install flathub com.heroicgameslauncher.hgl
 flatpak install flathub md.obsidian.Obsidian
 flatpak install flathub com.discordapp.Discord
-flatpak install flathub net.davidotek.pupgui2
+#flatpak install flathub net.davidotek.pupgui2
 flatpak install flathub com.mattjakeman.ExtensionManager
-flatpak install flathub com.github.tchx84.Flatseal
+#flatpak install flathub com.github.tchx84.Flatseal
 flatpak install flathub com.rtosta.zapzap
 
 # Installing Nvidia Drivers
