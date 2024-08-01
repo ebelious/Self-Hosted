@@ -1,10 +1,9 @@
-#       _          _ _
-#   ___| |__   ___| (_) ___  _   _ ___
-#  / _ \ '_ \ / _ \ | |/ _ \| | | / __|
-# |  __/ |_) |  __/ | | (_) | |_| \__ \
-#  \___|_.__/ \___|_|_|\___/ \__,_|___/
-# https://github.com/ebelious
-#
+// #       _          _ _
+// #   ___| |__   ___| (_) ___  _   _ ___
+// #  / _ \ '_ \ / _ \ | |/ _ \| | | / __|
+// # |  __/ |_) |  __/ | | (_) | |_| \__ \
+// #  \___|_.__/ \___|_|_|\___/ \__,_|___/
+// # https://github.com/ebelious
 
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds {
@@ -194,13 +193,13 @@ keybinds {
 }
 
 plugins {
-//    tab-bar location="zellij:tab-bar"
-//    status-bar location="zellij:status-bar"
-//    strider location="zellij:strider"
+    tab-bar location="zellij:tab-bar"
+    status-bar location="zellij:status-bar"
+    strider location="zellij:strider"
     compact-bar location="zellij:compact-bar"
-//    session-manager location="zellij:session-manager"
+    session-manager location="zellij:session-manager"
     welcome-screen location="zellij:session-manager" {
-        welcome_screen true
+    welcome_screen true
     }
     filepicker location="zellij:strider" {
         cwd "/"
@@ -220,7 +219,8 @@ on_force_close "quit"
 //    - true
 //    - false (Default)
 //
-simplified_ui true
+// simplified_ui true
+
 ui {
     pane_frames {
         rounded_corners true
@@ -275,6 +275,24 @@ pane_frames false
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
 // themes {
+//     gruvbox-dark {
+//         fg 213 196 161
+//         bg 40 40 40
+//         black 60 56 54
+//         red 204 36 29
+//         green 152 151 26
+//         yellow 215 153 33
+//         blue 69 133 136
+//         magenta 177 98 134
+//         cyan 104 157 106
+//         white 251 241 199
+//         orange 214 93 14
+//     }
+//}
+
+
+
+// themes {
 //     dracula {
 //         fg 248 248 242
 //         bg 40 42 54
@@ -296,7 +314,7 @@ themes {
         bg 40 40 40
         black 60 56 54
         red 204 36 29
-        green 152 151 26
+        green 80 250 123
         yellow 215 153 33
         blue 69 133 136
         magenta 177 98 134
@@ -326,8 +344,7 @@ default_layout "compact"
 // Options:
 //   - true (default)
 //   - false
-//
- mouse_mode false
+// mouse_mode false
 
 // Configure the scroll back buffer size
 // This is the number of lines zellij stores for each pane in the scroll back
@@ -344,7 +361,7 @@ default_layout "compact"
 // Examples:
 //
 // copy_command "xclip -selection clipboard" // x11
-copy_command "wl-copy"                    // wayland
+// copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
 
 // Choose the destination for copied text
@@ -359,7 +376,7 @@ copy_command "wl-copy"                    // wayland
 // Enable or disable automatic copy (and clear) of selection when releasing mouse
 // Default: true
 //
-copy_on_select true
+// copy_on_select true
 
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
