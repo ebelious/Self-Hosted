@@ -1,11 +1,3 @@
-#       _          _ _
-#   ___| |__   ___| (_) ___  _   _ ___
-#  / _ \ '_ \ / _ \ | |/ _ \| | | / __|
-# |  __/ |_) |  __/ | | (_) | |_| \__ \
-#  \___|_.__/ \___|_|_|\___/ \__,_|___/
-# https://github.com/ebelious
-#
-
 # .bashrc
 
 # Source global definitions
@@ -96,11 +88,9 @@ alias msf='msfconsole -q'
 
 ## Git Repo Prompt
 #
-#parse_git_branch()
-#{
-#  git rev-parse --abbrev-ref head 2> /dev/null
-#}
-
+git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
 ## Time on right column prompt
 #
 #rightprompt()
@@ -110,7 +100,13 @@ alias msf='msfconsole -q'
 #export PS1="\[\n\]\[$(tput sc; rightprompt; tput rc)\]\[\e[2;36m\]\[\w\]\[\e[0m\]\[\n\]\[\e[0;32m[\]\[\e[0m\]\[\e[1;36m>\]\[\e[0m\]\[\e[0;32m]\]\[\e[0m\]\]\] "
 
 ## Basic prompt                                                                                                                                                                                                                           │#                                                                                                                                                                                                                                         │
-export PS1="\[\n\]\[\e[2;36m\]\[\w\]\[\e[0m\]\[\n\]\[\e[0;32m[\]\[\e[0m\]\[\e[1;36m>\]\[\e[0m\]\[\e[0;32m]\]\[\e[0m\]\]\] "  
+# With [>]
+# export PS1="\[\n\]\[\e[2;36m\]\[\w\]\[\e[0m\]\[\n\]\[\e[0;33m[\]\[\e[0m\]\[\e[1;37m>_\]\[\e[0m\]\[\e[0;33m]\]\[\e[0m\]\]\] "  
+# With :
+#export PS1="\[\n\]\[\e[2;33m\]\[\w\]\[\e[0m\]\[\n\]\[\e[0m\]\[\e[0m\]\[\e[1;36m:\]\[\e[0m\]\[\e[0m\] "
+# PS1 with Git repo in prompt
+export PS1="\[\n\]\[\e[2;33m\]\[\w\]\[\e[0m\]\[\n\]\[\e[0m\]\[\e[0m\]\[\e[0;32m\]\$(git_branch)\\[\e[0m\]\[\e[1;36m:\e[0m\]\[\e[0m\]\[\e[0m\] "
+
 
 
 ## pyenv variable
@@ -119,12 +115,17 @@ export PS1="\[\n\]\[\e[2;36m\]\[\w\]\[\e[0m\]\[\n\]\[\e[0;32m[\]\[\e[0m\]\[\e[1;
 #[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 #eval "$(pyenv init -)"
 
+
 ## Start Zellij on Launch
 eval "$(zellij setup --generate-auto-start bash)"
+
 
 ## fastfetch header
 #
 fastfetch -l none
+
+# Kitty SSH variable to avoid errors
+export TERM=xterm
 
 # These are the Command-Center aliases
 alias sqlmap='python ~/Command-Center/sqlmap-dev/sqlmap.py'
