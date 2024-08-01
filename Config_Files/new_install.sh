@@ -20,7 +20,7 @@ sudo dnf update
 sudo dnf copr enable elxreno/preload
 
 # Installing my main packages
-sudo dnf install htop nmap timeshift bleachbit kitty preload fastfetch lsd fzf bat pipx trash-cli
+sudo dnf install htop nmap timeshift bleachbit kitty preload fastfetch lsd fzf bat pipx
 
 # Install lf 
 curl https://github.com/gokcehan/lf/releases/download/r32/lf-linux-amd64.tar.gz
@@ -78,5 +78,3 @@ curl https://pyenv.run | bash
 # Installing Zellij terminal multi plexer
 curl https://github.com/zellij-org/zellij/releases/latest/download/zellij-x86_64-unknown-linux-musl.tar.gz
 tar -xf zellij-x86_64-unknown-linux-musl.tar.gz && cp zellij ~/.local/bin
-
-
