@@ -46,19 +46,19 @@ sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda
 
 # Make an Enterprise account
 #### Set device hostname
-sudo hostnamectl set-hostname [HOSTNAME]
+sudo hostnamectl set-hostname sanctuary
 
 #### Configure resolved
-echo "[Resolve]" | sudo tee -a /etc/systemd/resolved.conf
-echo "DNS=10.1.1.18 172.17.0.2 1.1.1.1 1.0.0.1" | sudo tee -a /etc/systemd/resolved.conf
-echo "Domains=home.local" | sudo tee -a /etc/systemd/resolved.conf
-sudo systemctl restart systemd-resolved.service
-resolvectl status
-sleep 3
+#echo "[Resolve]" | sudo tee -a /etc/systemd/resolved.conf
+#echo "DNS=10.1.1.18 172.17.0.2 1.1.1.1 1.0.0.1" | sudo tee -a /etc/systemd/resolved.conf
+#echo "Domains=home.local" | sudo tee -a /etc/systemd/resolved.conf
+#sudo systemctl restart systemd-resolved.service
+#resolvectl status
+#sleep 3
 
 #### Configure kerberos
-sudo nano /etc/krb5.conf
-sudo realm join -v home.local
+#sudo nano /etc/krb5.conf
+#sudo realm join -v home.local
 
 # Install Brave Browser
 sudo dnf install dnf-plugins-core
