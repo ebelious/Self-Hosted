@@ -97,7 +97,7 @@ root@proxmox:~# lspci | grep NVIDIA
 81:00.1 Audio device: NVIDIA Corporation GM107 High Definition Audio Controller [GeForce 940MX] (rev a1)
 ```
 
-Here we are searching for the GPU to get the device ID (we do not need the last ubnit in the number to filter)
+Here we are searching for the GPU to get the device ID (we do not need the last unit in the number to filter)
 ```
 lspci -n -s xx:xx -v
 ```
