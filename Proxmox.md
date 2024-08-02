@@ -1,4 +1,4 @@
-# This is a Guide for Proxmox insallation
+# This is a Guide for Proxmox installation
 Proxmox is a type 1 hypervisor akin to vmware esxi. This guide will show how to do basic configurations, GPU / PCI passthrough, taking backups, and creating users and giving permissions.
 
 ## How to install Proxmox
