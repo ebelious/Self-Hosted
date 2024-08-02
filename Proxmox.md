@@ -7,7 +7,7 @@ Go to [Proxmoxs](https://www.proxmox.com/en/downloads) website and download the 
 #### Create Boot Disk
 Make a bootable USB drive using a software like [Rufus](https://rufus.ie/en/) or [Belena Etcher](https://etcher.balena.io/)
 
-Make sure that virtualization is configured in UEFI/BIOS settings, if this is not enable this will not work
+Make sure that virtualization is configured in UEFI/BIOS settings, if this is not enabled this will not work
 
 Start the system and boot from the USB and when the splash page loads select the graphical installer option
 - Select what disks you want to install proxmox in the drop down and if you want to configure  the disks in raid
