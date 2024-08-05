@@ -28,9 +28,9 @@ These commands will generate 2 docker containers (May need to use sudo)
 - Open WebUI
 
 #
-	docker run -d --network=host -v tts-voices:/app/voices -v tts-config:/app/config --name openedai-speech ghcr.io/matatonic/openedai-speech-min:latest
+	docker run -d --gpus all --network=host -v tts-voices:/app/voices -v tts-config:/app/config --name openedai-speech ghcr.io/matatonic/openedai-speech-min:latest
 #
-	docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+	docker run -d --gpus all --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 
 
 ## Configure Open WebUI to use openedai-speech 
