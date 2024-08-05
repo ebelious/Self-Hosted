@@ -21,7 +21,7 @@ If you are using a Nvidia GPU, use this to verify the GPU is being used with oll
 
 	watch -n 0.5 nvidia-smi
 
-## Install Open WebUI with openedai-speech integration
+## Install Open WebUI with openedai-speech integration (with GPU support)
 
 These commands will generate 2 docker containers (May need to use sudo)
 - Opendai-speech
