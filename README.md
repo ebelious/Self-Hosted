@@ -36,7 +36,7 @@
 - [Palo Alto](https://github.com/ebelious/Self-Hosted/blob/main/Palo%20Alto.md) - Guide/cheatsheet for Palo Alto Devices
 - [Bash](https://github.com/ebelious/Self-Hosted/blob/main/Bash.md) - References and guides for bash scripting
 - [lsd](https://github.com/ebelious/Self-Hosted/blob/main/Config_Files/README.md#lsd---nextgen-ls) - Delux ls command - shows icons
-- [Proxmox Helper_Scripts](https://tteck.github.io/Proxmox/#webmin-system-administration) - automation for proxmox virtualization - tteck
+- [Proxmox Helper Scripts](https://tteck.github.io/Proxmox/#webmin-system-administration) - automation for proxmox virtualization - tteck
 #
 ## Other:
 - [Dots and Configs](https://github.com/ebelious/Self-Hosted/tree/main/Config_Files) - files and some references
