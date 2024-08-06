@@ -4,6 +4,7 @@ This is a setup where I have all of this installed on a local desktop (Fedora 40
 
 - Verify the system is up to date (apt, dnf, ect)
 - Verify Docker is installed
+- nvidia container support (https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installing-with-yum-or-dnf)
 
 ## Install Ollama
 
