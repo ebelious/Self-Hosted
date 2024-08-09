@@ -186,6 +186,11 @@ el	\e[K	clear to end of line
 el1	\e[1K	clear to beginning of line
 ```
 
+
+## Spinner example
+
+[spinner-example](https://github.com/ebelious/Self-Hosted/blob/main/spinner-example)
+
 ## Bash Guide - [cyberciti.biz](https://bash.cyberciti.biz/guide/Main_Page)
 
 Linux Bash Shell Scripting Tutorial
