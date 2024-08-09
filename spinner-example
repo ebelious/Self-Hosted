@@ -1,10 +1,12 @@
-
-
-
-
 #!/bin/bash
+#      _          _ _
+#   ___| |__   ___| (_) ___  _   _ ___
+#  / _ \ '_ \ / _ \ | |/ _ \| | | / __|
+# |  __/ |_) |  __/ | | (_) | |_| \__ \
+#  \___|_.__/ \___|_|_|\___/ \__,_|___/
+# https://github.com/ebelious
 #
-#! This is for creating a loading animation when running a process
+# This is for creating a loading animation when running a process
 #
 
 # Different animations
