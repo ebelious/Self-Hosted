@@ -29,7 +29,6 @@ echo
 echo -e "$HOSTED"
 echo -e "\e[0;36mDownload:\e[0m $DL"
 echo -e "\e[0;32mUpload:\e[0m $UL"
-
 }
 
 spin(){
