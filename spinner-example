@@ -10,11 +10,7 @@
 #
 
 # Different animations
-#spinn=( '\' '|' '/' '-' )
-spinn[0]='-'
-spinn[1]='\\'
-spinn[2]='|'
-spinn[3]='/'
+spinn=( '\\' '|' '/' '-' )
 #spinn=( Ooooo oOooo ooOoo oooOo ooooO )
 #spinn=( '#....' '.#...' '..#..' '...#.' '....#' )
 #spinn=( '>____' '_>___' '__>__' '___>_' '____>' )
