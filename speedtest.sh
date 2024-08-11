@@ -43,3 +43,15 @@ spin(){
 }
 
 process
+echo
+echo
+read -p 'Select R to re-run the test, or any other key to exit' OPTION
+
+if [[ $OPTION == R ]] || [[ $OPTION == r ]]
+then 
+  ./speedtest.sh
+else
+  echo -e "\e[3;35mExiting...\e[0m"
+  sleep 1.5
+  exit 1
+fi
