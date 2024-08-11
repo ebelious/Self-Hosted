@@ -37,6 +37,7 @@
 - [Bash](https://github.com/ebelious/Self-Hosted/blob/main/Bash.md) - References and guides for bash scripting
 - [lsd](https://github.com/ebelious/Self-Hosted/blob/main/Config_Files/README.md#lsd---nextgen-ls) - Delux ls command - shows icons
 - [Proxmox Helper Scripts](https://tteck.github.io/Proxmox/#webmin-system-administration) - automation for proxmox virtualization - tteck
+- [Kitty Terminal](https://sw.kovidgoyal.net/kitty/) - This is a GPU accellerated terminal emulator with many customization options
 #
 ## Other:
 - [Dots and Configs](https://github.com/ebelious/Self-Hosted/tree/main/Config_Files) - files and some references
