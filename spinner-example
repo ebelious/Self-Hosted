@@ -13,6 +13,7 @@
 spinn=( '\' '|' '/' '-' )
 #spinn=( Ooooo oOooo ooOoo oooOo ooooO )
 #spinn=( '#....' '.#...' '..#..' '...#.' '....#' )
+HOSTED=$(grep Hosted speedtest.tmp)
 DL=$(grep Download speedtest.tmp | awk '{print $2 $3}')
 UL=$(grep Upload speedtest.tmp | awk '{print $2 $3}')
 clear
@@ -24,10 +25,10 @@ process(){
   kill $pid
 clear
 echo
-echo -e "\e[1;mResults\e[0m"
-echo
+echo -e "$HOSTED"
 echo -e "\e[0;36mDownload:\e[0m $DL"
 echo -e "\e[0;32mUpload:\e[0m $UL"
+
 }
 
 spin(){
