@@ -8,10 +8,6 @@
 #
 # This is for creating a loading animation when running a process
 #
-#!/bin/bash
-#
-# This is for creating a loading animation when running a process
-#
 
 # Different animations
 #spinn=( '\' '|' '/' '-' )
