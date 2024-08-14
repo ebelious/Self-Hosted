@@ -25,7 +25,7 @@
 - [Gaming / Nvidia Drivers](https://github.com/ebelious/Self-Hosted/blob/main/Gaming.md)
 - [Proxmox / Backup / GPU Passthrough / Users and Permissions](https://github.com/ebelious/Self-Hosted/blob/main/Proxmox.md)
 - [Command Center](https://github.com/ebelious/Command-Center) - Tool for Common IT Tasks - Still a work in progress
-- [Scripts]()
+- [Scripts](ww)
 #
 ## Tools:
 
