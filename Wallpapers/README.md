@@ -54,8 +54,6 @@ Click on the image to download
 
 ![27](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/sunset.jpg)
 
-![28](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/wallpaperflare.com_wallpaper%20(1).jpg)
-
 ![29](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/wallpaperflare.com_wallpaper.jpg)
 
 ![30](https://github.com/ebelious/Self-Hosted/blob/main/Wallpapers/wallpapersden.com_anime-landscape-2023-ai-art_1952x1120.jpg)
