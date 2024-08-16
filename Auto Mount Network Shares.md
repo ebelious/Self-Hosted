@@ -5,6 +5,10 @@ Auto-Mount SMB Share on Boot
 ``` 
 # smb mount
 //SHARE IP/SHARE /mnt/SHARE cifs credentials=/home/USER/.smbcredentials,uid=1000,gid=1000,x-gvfs-show  0 0 
+
+# nsf mount
+<file system>     <dir>       <type>   <options>   <dump>	<pass>
+10.10.0.10:/backups /var/backups  nfs      defaults    0       0
 ```
 This mounts the network share to the specified directory and uses the file using CIFS and uses the specified file for the credential access, then added user and group permissions to access this directory, and allowed this to be seen in file manager
 
