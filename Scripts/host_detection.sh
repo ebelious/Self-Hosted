@@ -7,7 +7,7 @@
 # https://github.com/ebelious
 #
 # This is for creating a loading animation when running a process
-#
+# requires nmap
 
 # Different animations
 spinn=( '\\' '|' '/' '-' )
