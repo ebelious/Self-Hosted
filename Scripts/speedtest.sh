@@ -7,7 +7,6 @@
 # https://github.com/ebelious
 #
 # This is for creating a loading animation when running a process
-#
 
 # Different animations
 spinn=( '\\' '|' '/' '-' )
@@ -15,18 +14,20 @@ spinn=( '\\' '|' '/' '-' )
 #spinn=( '#....' '.#...' '..#..' '...#.' '....#' )
 #spinn=( '>____' '_>___' '__>__' '___>_' '____>' )
 HOSTED=$(grep Hosted speedtest.tmp)
-DL=$(grep Download speedtest.tmp | awk '{print $2 $3}')
-UL=$(grep Upload speedtest.tmp | awk '{print $2 $3}')
+DL=$(grep Download $HOME/Scripts/speedtest/speedtest.tmp | awk '{print $2 $3}')
+UL=$(grep Upload $HOME/Scripts/speedtest/speedtest.tmp | awk '{print $2 $3}')
+
 clear
 
 process(){
  spin &
  pid=$!
-  speedtest-cli > speedtest.tmp
+  speedtest-cli > $HOME/Scripts/speedtest/speedtest.tmp
   kill $pid
 clear
 echo
 echo -e "$HOSTED"
+echo
 echo -e "\e[0;36mDownload:\e[0m $DL"
 echo -e "\e[0;32mUpload:\e[0m $UL"
 }
@@ -37,21 +38,24 @@ spin(){
     for i in "${spinn[@]}"
     do
       echo -ne "\r\e[0;32m[\e[0m\e[0;36m$i\e[0;32m]\e[0m Testing Connection"
-      sleep 0.2
+      sleep 0.175
     done
   done
 }
 
 process
+
 echo
 echo
-read -p 'Select R to re-run the test, or any other key to exit' OPTION
+echo -e "\e[3;37mSelect 'R' to re-run the test, or any other key to exit\e[0m"
+read -p 'Would you like to test again: ' OPTION
 
 if [[ $OPTION == R ]] || [[ $OPTION == r ]]
-then 
+then
   ./speedtest.sh
 else
-  echo -e "\e[3;35mExiting...\e[0m"
+  echo -e "\e[0;35mExiting\e[0m " 
   sleep 1.5
-  exit 1
+  clear
+  exit 0
 fi
