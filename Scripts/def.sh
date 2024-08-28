@@ -6,8 +6,7 @@
 #  \___|_.__/ \___|_|_|\___/ \__,_|___/
 # https://github.com/ebelious
 #
-# multi-lingual dictionary
-#
+# Multi-lingual dictionary
 # Requires: dictd
 #
 # may be good to add alias to script path : alias def='/path/to/file/def.sh'
