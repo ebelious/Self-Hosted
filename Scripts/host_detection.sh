@@ -6,7 +6,7 @@
 #  \___|_.__/ \___|_|_|\___/ \__,_|___/
 # https://github.com/ebelious
 #
-# This is for creating a loading animation when running a process
+# This is for detecting hosts in a specific network
 # Requires: nmap
 #
 
