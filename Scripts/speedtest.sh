@@ -6,7 +6,9 @@
 #  \___|_.__/ \___|_|_|\___/ \__,_|___/
 # https://github.com/ebelious
 #
-# This is for creating a loading animation when running a process
+# This is for testing internet connection upload nad download speeds
+# Requires: speedtest-cli
+#
 
 # Different animations
 spinn=( '\\' '|' '/' '-' )
