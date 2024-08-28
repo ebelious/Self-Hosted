@@ -6,7 +6,7 @@
 #  \___|_.__/ \___|_|_|\___/ \__,_|___/
 # https://github.com/ebelious
 #
-# This is for testing internet connection upload nad download speeds
+# This is for testing internet connection upload and download speeds
 # Requires: speedtest-cli
 #
 
