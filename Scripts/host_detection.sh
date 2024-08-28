@@ -15,15 +15,16 @@ spinn=( '\\' '|' '/' '-' )
 #spinn=( Ooooo oOooo ooOoo oooOo ooooO )
 #spinn=( '#....' '.#...' '..#..' '...#.' '....#' )
 #spinn=( '>____' '_>___' '__>__' '___>_' '____>' )
-RESULTS=$(cat host_detection.tmp | grep report | awk '{print $5}')
 
 clear
+
 process(){
  spin &
  pid=$!
  nmap -sn $TARGET > $HOME/Scripts/host_detection/host_detection.tmp
  kill $pid
  clear
+ sleep .5
 }
 
 spin(){
@@ -36,7 +37,7 @@ spin(){
     done
   done
 }
-rm host_detection.tmp
+
 echo -e "\e[3;37mExample 10.1.1.0/24\e[0m"
 echo "Enter a Network to Scan"
 echo -e "\e[3;32m"
@@ -46,9 +47,9 @@ clear
 
 process
 
-echo "Detected Hosts"
+echo -e  "Detected Hosts on \e[0;32m$TARGET\e[0m Network"
 echo
-echo "$RESULTS"
+cat $HOME/Scripts/host_detection/host_detection.tmp | grep report | awk '{print $5}'
 echo
 echo -e "\e[3;37mEnter 'R' to re-run the scan, or any other key to exit\e[0m"
 echo -e "Would you like to scan again:"
@@ -57,8 +58,10 @@ read  OPTION
 
 if [[ $OPTION == R ]] || [[ $OPTION == r ]]
 then
+  rm $HOME/Scripts/host_detection/host_detection.tmp
   $HOME/Scripts/host_detection/host_detection.sh
 else
+  $HOME/Scripts/host_detection/host_detection.tmp
   clear
   echo
   echo -e "\e[0;35mExiting\e[0m " 
