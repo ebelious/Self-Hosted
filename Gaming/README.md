@@ -1,6 +1,6 @@
 
 
-## This is for Gnome especific gaming mods and fixes
+## This is for Gnome specific gaming mods and fixes
 
 
 ### Clicking off screen minimizes game (How to stop this)
