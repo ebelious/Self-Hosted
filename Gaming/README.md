@@ -10,7 +10,7 @@ SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
 ```
 
 ### How to increase volume above 100%
-enter this via terminal
+Enter via terminal
 ```
 gsettings set org.gnome.desktop.sound allow-volume-above-100-percent 'true'
 ```
