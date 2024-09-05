@@ -43,3 +43,4 @@
 ## Other:
 - [Dots and Configs](https://github.com/ebelious/Self-Hosted/tree/main/Config_Files) - files and some references
 - [Wallpapers](https://github.com/ebelious/Self-Hosted/tree/main/Wallpapers)
+- [Gaming (Gnome SPecific)](..)
