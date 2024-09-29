@@ -17,6 +17,7 @@
 - [Ollama / Stable-Diffusion / Open-WebUI / Opendai-speech](https://github.com/ebelious/Self-Hosted/blob/main/Install%20Open-WebUI%20with%20local%20hosted%20Ollama%20-%20Linux.md)
 - [Fabric](https://github.com/ebelious/Self-Hosted/blob/main/Fabric.md)
 - [Wazuh](https://github.com/ebelious/Self-Hosted/blob/main/Wazuh.md)
+- [DFIR-Iris](https://github.com/ebelious/Self-Hosted/blob/main/DFIR-Iris.md)
 - [Activate Windows Server](https://github.com/ebelious/Self-Hosted/blob/main/Activate%20Windows%20Server.md)
 - [Linux Enterprise Account](https://github.com/ebelious/Self-Hosted/blob/main/Linux%20Enterprise%20Account.md)
 - [WinRM HTTPS for Palo Alto](https://github.com/ebelious/Self-Hosted/blob/main/WinRM%20HTTPS%20for%20Palo%20Alto.md)
