@@ -27,7 +27,7 @@
 - [Command Center](https://github.com/ebelious/Command-Center) - Tool for Common IT Tasks - Still a work in progress
 - [Scripts](https://github.com/ebelious/Self-Hosted/tree/main/Scripts)
 ### Gaming / Linux
-- [Gaming / Nvidia Drivers](https://github.com/ebelious/Self-Hosted/blob/main/Gaming.md)
+- [Gaming / Nvidia Drivers](https://github.com/ebelious/Self-Hosted/blob/main/Gaming.md) (install gaming apps, prep disks)
 - [Gaming (Gnome Specific)](https://github.com/ebelious/Self-Hosted/blob/main/Gaming/README.md)
 
 ### Other
