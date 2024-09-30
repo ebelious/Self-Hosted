@@ -20,5 +20,5 @@ http://<IP>:3001
 
 This is some [Geting Started](https://shuffler.io/docs/getting_started) documentation
 
-There are additional apps you can get by signing into your account on [shuffle.io] and searching in the search menu.
+There are additional apps you can get by signing into your account on [shuffler.io](https://shuffler.io/) and searching in the search menu.
 I added these to a local instance by Activating the App, downloading the YAML file, and then importing this to my local instanace
