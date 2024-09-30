@@ -13,21 +13,27 @@
 </p>
 
 #
-## Projects: 
+## Projects:
+### AI/Machine Learning
 - [Ollama / Stable-Diffusion / Open-WebUI / Opendai-speech](https://github.com/ebelious/Self-Hosted/blob/main/Install%20Open-WebUI%20with%20local%20hosted%20Ollama%20-%20Linux.md)
 - [Fabric](https://github.com/ebelious/Self-Hosted/blob/main/Fabric.md)
+### Security
 - [Wazuh](https://github.com/ebelious/Self-Hosted/blob/main/Wazuh.md)
 - [DFIR-Iris](https://github.com/ebelious/Self-Hosted/blob/main/DFIR-Iris.md)
 - [Shuffle](https://github.com/ebelious/Self-Hosted/blob/main/shuffle.md)
-- [Activate Windows Server](https://github.com/ebelious/Self-Hosted/blob/main/Activate%20Windows%20Server.md)
-- [Linux Enterprise Account](https://github.com/ebelious/Self-Hosted/blob/main/Linux%20Enterprise%20Account.md)
 - [WinRM HTTPS for Palo Alto](https://github.com/ebelious/Self-Hosted/blob/main/WinRM%20HTTPS%20for%20Palo%20Alto.md)
-- [Auto Mount Network Shares](https://github.com/ebelious/Self-Hosted/blob/main/Auto%20Mount%20Network%20Shares.md)
-- [Ansible](https://github.com/ebelious/Self-Hosted/blob/main/Ansible.md)
+### Automation
 - [Gaming / Nvidia Drivers](https://github.com/ebelious/Self-Hosted/blob/main/Gaming.md)
-- [Proxmox / Backup / GPU Passthrough / Users and Permissions](https://github.com/ebelious/Self-Hosted/blob/main/Proxmox.md)
+- [Auto Mount Network Shares](https://github.com/ebelious/Self-Hosted/blob/main/Auto%20Mount%20Network%20Shares.md)
+- [Gaming / Nvidia Drivers](https://github.com/ebelious/Self-Hosted/blob/main/Gaming.md)
 - [Command Center](https://github.com/ebelious/Command-Center) - Tool for Common IT Tasks - Still a work in progress
 - [Scripts](https://github.com/ebelious/Self-Hosted/tree/main/Scripts)
+
+### Other
+- [Linux Enterprise Account](https://github.com/ebelious/Self-Hosted/blob/main/Linux%20Enterprise%20Account.md)
+- [Proxmox / Backup / GPU Passthrough / Users and Permissions](https://github.com/ebelious/Self-Hosted/blob/main/Proxmox.md)
+- [Activate Windows Server](https://github.com/ebelious/Self-Hosted/blob/main/Activate%20Windows%20Server.md)
+
 #
 ## Tools:
 
@@ -42,7 +48,7 @@
 - [Proxmox Helper Scripts](https://tteck.github.io/Proxmox/#webmin-system-administration) - automation for proxmox virtualization - tteck
 - [Kitty Terminal](https://sw.kovidgoyal.net/kitty/) - This is a GPU accellerated terminal emulator with many customization options
 #
-## Other:
+## Other / Misc:
 - [Dots and Configs](https://github.com/ebelious/Self-Hosted/tree/main/Config_Files) - files and some references
 - [Wallpapers](https://github.com/ebelious/Self-Hosted/tree/main/Wallpapers)
 - [Gaming (Gnome Specific)](https://github.com/ebelious/Self-Hosted/blob/main/Gaming/README.md)
