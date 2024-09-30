@@ -23,11 +23,12 @@
 - [Shuffle](https://github.com/ebelious/Self-Hosted/blob/main/shuffle.md)
 - [WinRM HTTPS for Palo Alto](https://github.com/ebelious/Self-Hosted/blob/main/WinRM%20HTTPS%20for%20Palo%20Alto.md)
 ### Automation
-- [Gaming / Nvidia Drivers](https://github.com/ebelious/Self-Hosted/blob/main/Gaming.md)
 - [Auto Mount Network Shares](https://github.com/ebelious/Self-Hosted/blob/main/Auto%20Mount%20Network%20Shares.md)
-- [Gaming / Nvidia Drivers](https://github.com/ebelious/Self-Hosted/blob/main/Gaming.md)
 - [Command Center](https://github.com/ebelious/Command-Center) - Tool for Common IT Tasks - Still a work in progress
 - [Scripts](https://github.com/ebelious/Self-Hosted/tree/main/Scripts)
+### Gaming / Linux
+- [Gaming / Nvidia Drivers](https://github.com/ebelious/Self-Hosted/blob/main/Gaming.md)
+- [Gaming (Gnome Specific)](https://github.com/ebelious/Self-Hosted/blob/main/Gaming/README.md)
 
 ### Other
 - [Linux Enterprise Account](https://github.com/ebelious/Self-Hosted/blob/main/Linux%20Enterprise%20Account.md)
@@ -51,4 +52,3 @@
 ## Other / Misc:
 - [Dots and Configs](https://github.com/ebelious/Self-Hosted/tree/main/Config_Files) - files and some references
 - [Wallpapers](https://github.com/ebelious/Self-Hosted/tree/main/Wallpapers)
-- [Gaming (Gnome Specific)](https://github.com/ebelious/Self-Hosted/blob/main/Gaming/README.md)
