@@ -1,7 +1,11 @@
 # Quick Install for Wazuh - [Quick Install](https://documentation.wazuh.com/current/quickstart.html)
-
+Version 4.8
 ```
 curl -sO https://packages.wazuh.com/4.8/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
+```
+Version 4.9
+```
+curl -sO https://packages.wazuh.com/4.9/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
 ```
 Once the assistant finishes the installation, the output shows the access credentials and a message that confirms that the installation was successful.
 
