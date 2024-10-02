@@ -122,3 +122,15 @@ Choose your action: A,E,L,R or Q: L
 
 Run this command above and then select `r` and then enter the agent ID to remove the specifiec agent.
 
+### Allow External Connections to Wazuh Indedxer
+
+Indeed, by default, Wazuh Indexer is bound to 127.0.0.1 (loopback). If you want to use its API from a different machine (in this case, your host), you need to do the following:
+
+1. Modify the network.host field inside /etc/wazuh-indexer/opensearch.yml to bind it to all addresses:
+```
+network.host: "0.0.0.0"
+```
+2. Restart the indexer:
+```
+service wazuh-indexer restart
+```
