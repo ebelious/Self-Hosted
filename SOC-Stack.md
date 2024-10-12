@@ -182,6 +182,13 @@ Add the following under the section `Fix for log4j CVE-2021-44228` and coment ou
 ```
 GRAYLOG_SERVER_JAVA_OPTS="$GRAYLOG_SERVER_JAVA_OPTS -Dlog4j2.formatMsgNoLookups=true -Djavax.net.ssl.trustStore=/etc/graylog/server/certs/cacerts -Djavax.net.ssl.trustStorePassword=changeit"
 ```
+
+Access via web: `http://IP:9000`
+go to `System` > `Users and Teams` > `Create user`
+Create `copilot` user 
+- Select session never expires
+- create password
+
 ---
 
 ## Install FluentBit
@@ -276,6 +283,12 @@ We will then create a debian server client package anmd also rpm package
 ```
 ```
 ./velociraptor-v0.72.1-linux-amd64 --config client.config.yaml rpm client
+```
+
+Creat an api config for copilot to connect
+
+```
+./velociraptor-v0.72.1-linux-amd64 --config server.config.yaml config api_client --name NAME_VALID_USER --role administrator,api api.config.yaml
 ```
 
 ---
