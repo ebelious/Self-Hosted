@@ -374,3 +374,11 @@ grafana - admin user - port 3000
 velociraptor - api.config.yaml
 unfluxdb - - port
 ```
+
+
+
+Now we will create a customer. You can name this whatever you want in accordacne with the input copilot requires
+
+On the `overview` dashboard, select `stack provisioning` and `deploy`
+
+Then select the customer you created ing he `customers` dashboard and provision customer
