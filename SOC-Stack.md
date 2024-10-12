@@ -91,7 +91,9 @@ Change the IPs of the server in the wazuh config to match the IP you will be acc
 Sign in and create the user for Graylog and Copilot
 `Index Management > Internal users` add (reccomended to use alpha-numeric password only)
 graylog - backend role: admin
-copilot
+
+
+and now a user for `copilot`
 
 ---
 
@@ -269,3 +271,5 @@ To get the `admin` credentials forthe GUI we need to run this command. The `plai
 ```
 docker logs "$(docker ps --filter ancestor=ghcr.io/socfortress/copilot-backend:latest --format "{{.ID}}")" 2>&1 | grep "Admin user password"
 ```
+
+Now we will create a customer 
