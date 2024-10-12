@@ -53,6 +53,8 @@ sudo systemctl restart mongod.service
 sudo systemctl --type=service --state=active | grep mongod
 ```
 
+---
+
 ## Install [Wazuh 4.9](https://documentation.wazuh.com/current/quickstart.html)(open search)
 For this I use the quick install script 
 ```
@@ -67,7 +69,7 @@ add this line somewhere in the config (opensearch.yml)
 ```
 bootstrap.memory_lock: true
 ```
-We wil open this file and add the meomry lock line in the `Service` section
+We will open this file and add the meomry lock line in the `Service` section
 ```
 nano /usr/lib/systemd/system/wazuh-indexer.service
 ```
@@ -84,12 +86,14 @@ sudo systemctl daemon-reload
 sudo systemctl restart wazuh-indexer
 ```
 
-Change the IPs of the server in the wazuh config to match the IP you will be accessing this from by editing `/etc/wazuh-indexer/opensearch/yml` and `/etc/wazuh-dashboard/wazuh-dashboards.yml`
+Change the IPs of the server in the wazuh config to match the IP you will be accessing this from by editing`/etc/wazuh-dashboard/wazuh-dashboards.yml`
 
 Sign in and create the user for Graylog and Copilot
 `Index Management > Internal users` add (reccomended to use alpha-numeric password only)
 graylog - backend role: admin
 copilot
+
+---
 
 ## Install [Graylog 6.0](https://go2docs.graylog.org/current/downloading_and_installing_graylog/ubuntu_installation.html)
 
@@ -123,7 +127,7 @@ Add these to `/etc/graylog/server/server.conf` in their respective places `elast
 
 While we are in here we will also place the server IP address in the HTTPS configuration section
 ```
-elasticsearch_hosts = https://SERVER_IP:9200
+elasticsearch_hosts = https://USER:PASSWORD@127.0.0.1:9200
 ```
 ```
 http_bind_address = 0.0.0.0:9000
@@ -147,6 +151,8 @@ Add the following under the section `Fix for log4j CVE-2021-44228` and coment ou
 ```
 GRAYLOG_SERVER_JAVA_OPTS="$GRAYLOG_SERVER_JAVA_OPTS -Dlog4j2.formatMsgNoLookups=true -Djavax.net.ssl.trustStore=/etc/graylog/server/certs/cacerts -Djavax.net.ssl.trustStorePassword=changeit"
 ```
+---
+
 ## Install FluentBit
 
 For this we will not be using filebeat, but fluent-bit. We will disable and stop the filebeat service.
@@ -201,4 +207,42 @@ Start fluent-bit
 ```
 systemctl enable fluent-bit
 systemctl start fluent-bit
+```
+
+---
+
+## Install [Velociraptor](https://github.com/Velocidex/velociraptor)
+
+This is installing the version 0.72, there is other releases on thier github 
+```
+wget https://github.com/Velocidex/velociraptor/releases/download/v0.72/velociraptor-v0.72.1-linux-amd64
+```
+```
+chmod +x velociraptor-v0.72.1-linux-amd6
+```
+
+This will run the interactive configuration
+```
+./velociraptor-v0.72.1-linux-amd6 config generate -i
+```
+
+Edit the `server.config.yml` and change the GUI bind address to the servers IP
+
+Then we wil create the deb package for ther server binary to install 
+```
+./velociraptor-v0.6.4-2-linux-amd64 --config server.config.yaml debian server --binary 
+```
+
+Install the server binary
+```
+dpkg -i velociraptor_server_0.72.1_amd64.deb
+```
+
+We will then create a debian server client package anmd also rpm package
+
+```
+./velociraptor-v0.72.1-linux-amd64 --config client.config.yaml debian client
+```
+```
+./velociraptor-v0.72.1-linux-amd64 --config client.config.yaml rpm client
 ```
