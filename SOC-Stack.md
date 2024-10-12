@@ -69,6 +69,9 @@ add this line somewhere in the config (opensearch.yml)
 ```
 bootstrap.memory_lock: true
 ```
+Also make sure the network host is like this `network.host: "0.0.0.0"`
+
+
 We will open this file and add the meomry lock line in the `Service` section
 ```
 nano /usr/lib/systemd/system/wazuh-indexer.service
@@ -94,6 +97,32 @@ graylog - backend role: admin
 
 
 and now a user for `copilot`
+
+Go int oadd new `permissions`. Then you will click `create action group` in the cluster permissions
+click `create new action group > from blank` and name this `copilot_action_group` 
+
+
+Add the following
+```
+indices_all
+
+kibana_all_read
+
+read
+
+cluster_monitor
+
+```
+Then go to roles and add a new `roles`.
+```
+name: copilot
+password: create_one
+cluster permissions: copilot
+index: *
+index permissions: read index indices_all
+```
+
+then map `copilot` user to this role, nothing else is needed
 
 ---
 
