@@ -326,6 +326,9 @@ domain = localhost
 cert_file = /etc/grafana/certs/wazuh-indexer.pem
 cert_key = /etc/grafana/certs/wazuh-indexer-key.pem
 ```
+```
+sudo chown -R grafana:grafana /etc/grafana/certs/
+```
 
 ---
 
