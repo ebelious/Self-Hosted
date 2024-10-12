@@ -9,7 +9,7 @@ This is a write up for installing the all-in-one SOC stack using free and open s
 4. Install Graylog
 5. Install Fluent Bit
 6. Install Velociraptor
-7. Install grafana
+7. Install Grafana
 8. Install [Soc-Fortress Copilot](https://github.com/socfortress/CoPilot)
 
 ---
@@ -280,6 +280,12 @@ We will then create a debian server client package anmd also rpm package
 
 ---
 
+## Install Grafana
+
+
+---
+
+
 ## Install [CoPilot](https://github.com/socfortress/CoPilot)
 
 grab the rpo from their github
@@ -301,4 +307,11 @@ To get the `admin` credentials forthe GUI we need to run this command. The `plai
 docker logs "$(docker ps --filter ancestor=ghcr.io/socfortress/copilot-backend:latest --format "{{.ID}}")" 2>&1 | grep "Admin user password"
 ```
 
-Now we will create a customer 
+Now we will add our connections we need to CoPilot.
+```
+wazuh-indexer: copilot user - port 9200
+wazuh-manager: wazuh-wui user - port 55000
+graylog - copilot user - port 9000
+grafana - admin user - port 3000
+velociraptor - api.config.yaml
+```
