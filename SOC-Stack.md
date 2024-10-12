@@ -1,5 +1,5 @@
 ## Instructions to install a SOC Stack
-This is a write up for installing the all-in-one SOC stack using free and open source tools which is greatly improved by integrating the tools with a project by  [socfortress](https://github.com/socfortress/CoPilot). This integreates a lot of the opensource tools we all love to use and allows you to utilizsze the benefits of each in a single pane of glass.
+This is a write up for installing the all-in-one SOC stack using free and open source tools which is greatly improved by integrating the tools with a project by  [socfortress](https://github.com/socfortress/CoPilot). This integrates a lot of the opensource tools we all love to use and allows you to utilize the benefits of each in a single pane of glass.
 
 ** Note: This may be best used as a lab enviroment and not production
 
@@ -17,7 +17,10 @@ This is a write up for installing the all-in-one SOC stack using free and open s
 ## Install Ubuntu 22.04 on a vm (or hardware if youre daring enough)
 - The size of this vm may be dependant oin the resources you have to add to the machine
 - same with disk space would depend on how many llogs youre injesting
-
+```
+sudo sysctl -w vm.max_map_count=262144
+echo 'vm.max_map_count=262144' | sudo tee -a /etc/sysctl.conf
+```
 
 ## Install Mongodb 5.0+
 This will install mongodb 6.0, the process would be the same for different versions, but you need to locate that repo instead pf 6.0. 
@@ -80,11 +83,22 @@ edit the `-Xms4g` and `-Xmx4g` value to not be above half of the memory
 sudo systemctl daemon-reload
 sudo systemctl restart wazuh-indexer
 ```
-```
-sudo sysctl -w vm.max_map_count=262144
-echo 'vm.max_map_count=262144' | sudo tee -a /etc/sysctl.conf
-```
+
+Change the IPs of the server in the wazuh config to match the IP you will be accessing this from by editing `/etc/wazuh-indexer/opensearch/yml` and `/etc/wazuh-dashboard/wazuh-dashboards.yml`
+
+Sign in and create the user for Graylog and Copilot
+`Index Management > Internal users` add (reccomended to use alpha-numeric password only)
+graylog - backend role: admin
+copilot
+
 ## Install [Graylog 6.0](https://go2docs.graylog.org/current/downloading_and_installing_graylog/ubuntu_installation.html)
+
+prereqs:
+```
+sudo apt install apt-transport-https openjdk-11-jre-headless uuid-runtime dirmngr
+```
+
+Download and install graylog
 ```
 wget https://packages.graylog2.org/repo/packages/graylog-6.0-repository_latest.deb
 sudo dpkg -i graylog-6.0-repository_latest.deb
@@ -101,17 +115,20 @@ password secret
 ```
 < /dev/urandom tr -dc A-Z-a-z-0-9 | head -c${1:-96};echo;
 ```
-root Sha hash
+root sha hash
 ```
 echo -n "Enter Password: " && head -1 </dev/stdin | tr -d '\n' | sha256sum | cut -d" " -f1
 ```
-Add these to `sudo nano /etc/graylog/server/server.conf` in theier respective places `elasticsearch_hosts`
+Add these to `/etc/graylog/server/server.conf` in their respective places `elasticsearch_hosts`
+
+While we are in here we will also place the server IP address in the HTTPS configuration section
 ```
 elasticsearch_hosts = https://SERVER_IP:9200
 ```
-While we are in here we will also place the server IP address in the HTTPS configuration section
+```
+http_bind_address = 0.0.0.0:9000
+```
 
-For this we will not be using filebeat, but fluent-bit. We will disable and stop the filebeat service.
 ```
 sudo systemctl daemon-reload
 sudo systemctl enable graylog-server.service
@@ -119,8 +136,69 @@ sudo systemctl start graylog-server.service
 sudo systemctl --type=service --state=active | grep graylog
 ```
 
+So form here we will need to create a directory for the SSL certifiactes to allow gray log to communicate with opensearch
+```
+mkdir /etc/graylog/server/certs
+cp /etc/wazuh-indexer/certs/root-ca.pem /etc/graylog/server/certs/
+cp -a /usr/lib/jvm/java-11-openjdk-amd64/lib/security/cacerts /etc/graylog/server/certs/cacerts
+keytool -importcert -keystore /etc/graylog/server/certs/cacerts -storepass changeit -alias root_ca -file /etc/graylog/server/certs/root-ca.pem
+```
+Add the following under the section `Fix for log4j CVE-2021-44228` and coment out hte line that is already present in `/etc/default/graylog-server`
+```
+GRAYLOG_SERVER_JAVA_OPTS="$GRAYLOG_SERVER_JAVA_OPTS -Dlog4j2.formatMsgNoLookups=true -Djavax.net.ssl.trustStore=/etc/graylog/server/certs/cacerts -Djavax.net.ssl.trustStorePassword=changeit"
+```
+## Install FluentBit
 
+For this we will not be using filebeat, but fluent-bit. We will disable and stop the filebeat service.
 ```
 sudo systemctl disable filebeat
 sudo systemctl stop filebeat
+```
+
+Install fluent-bit
+```
+curl https://raw.githubusercontent.com/fluent/fluent-bit/master/install.sh | sh
+```
+
+remove all the contents of `/etc/fluent-bit/fluent-bit.conf` and add this 
+
+```
+[SERVICE]
+    flush        5
+    daemon       Off
+    log_level    info
+    parsers_file parsers.conf
+    plugins_file plugins.conf
+    http_server  Off
+    http_listen  0.0.0.0
+    http_port    2020
+    storage.metrics on
+    storage.path /var/log/flb-storage/
+    storage.sync normal
+    storage.checksum off
+    storage.backlog.mem_limit 5M
+    Log_File /var/log/td-agent-bit.log
+[INPUT]
+    name  tail
+    path  /var/ossec/logs/alerts/alerts.json
+    tag wazuh
+    parser  json
+    Buffer_Max_Size 5MB
+    Buffer_Chunk_Size 400k
+    storage.type      filesystem
+    Mem_Buf_Limit     512MB
+[OUTPUT]
+    Name  tcp
+    Host  *your graylog host*
+    Port  *your graylog port*
+    net.keepalive off
+    Match wazuh
+    Format  json_lines
+    json_date_key true
+```
+
+Start fluent-bit
+```
+systemctl enable fluent-bit
+systemctl start fluent-bit
 ```
