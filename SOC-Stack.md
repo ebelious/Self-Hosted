@@ -29,7 +29,7 @@ Note: There is a cpu requuirement for mongodb 5.0+ (AVX support)
 sudo apt update
 ```
 ```
-sudo apt install git curl gnupg 
+sudo apt install git curl gnupg docker docker-compose wget
 ```
 ```
 curl -fsSL https://www.mongodb.org/static/pgp/server-6.0.asc | \
@@ -246,3 +246,16 @@ We will then create a debian server client package anmd also rpm package
 ```
 ./velociraptor-v0.72.1-linux-amd64 --config client.config.yaml rpm client
 ```
+
+---
+
+## Install [CoPilot](https://github.com/socfortress/CoPilot)
+
+grab the rpo from their github
+```
+git clone https://github.com/socfortress/CoPilot.git
+cd CoPilot
+cp .env.example .env
+```
+edit the `.env` file and addd passwrods the the `REPLACE_ME` sections and add the ALERT_Forwarding IP to the server IP
+Edit the docker-compose.yml and edit the host port for copilot-frontend to a non default port
