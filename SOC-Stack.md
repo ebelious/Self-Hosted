@@ -15,7 +15,7 @@ This is a write up for installing the all-in-one SOC stack using free and open s
 ---
 
 ## Install Ubuntu 22.04 on a vm (or hardware if youre daring enough)
-- The size of this vm may be dependant oin the resources you have to add to the machine
+- The size of this vm may be dependant on the resources you have to add to the machine
 - same with disk space would depend on how many llogs youre injesting
 ```
 sudo sysctl -w vm.max_map_count=262144
