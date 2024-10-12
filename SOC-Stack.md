@@ -329,6 +329,17 @@ cert_key = /etc/grafana/certs/wazuh-indexer-key.pem
 ```
 sudo chown -R grafana:grafana /etc/grafana/certs/
 ```
+log into web UI `https://SERVER_IP:3000`
+`admin:admiin`
+
+Will be prompted to change password
+
+go to `Administration` > `Users` and create the copilot user
+
+```
+copilot
+admin: yes
+```
 
 ---
 
@@ -361,4 +372,5 @@ wazuh-manager: wazuh-wui user - port 55000
 graylog - copilot user - port 9000
 grafana - admin user - port 3000
 velociraptor - api.config.yaml
+unfluxdb - - port
 ```
