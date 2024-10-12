@@ -310,6 +310,22 @@ echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com st
 sudo apt-get update
 sudo apt-get install grafana
 ```
+```
+mkdir /etc/grafana/certs
+cp /etc/wazuh-indexer/certs/wazuh-indexer.pem /etc/grafana/certs/
+cp /etc/wazuh-indexer/certs/wazuh-indexer-key.pem /etc/grafana/certs/
+```
+Modify the `/etc/grafana/grafana.ini` file
+
+in the `[server]` config make sure these are set
+
+```
+protocol = https
+domain = localhost
+
+cert_file = /etc/grafana/certs/wazuh-indexer.pem
+cert_key = /etc/grafana/certs/wazuh-indexer-key.pem
+```
 
 ---
 
