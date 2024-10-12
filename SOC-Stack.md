@@ -257,5 +257,15 @@ git clone https://github.com/socfortress/CoPilot.git
 cd CoPilot
 cp .env.example .env
 ```
-edit the `.env` file and addd passwrods the the `REPLACE_ME` sections and add the ALERT_Forwarding IP to the server IP
-Edit the docker-compose.yml and edit the host port for copilot-frontend to a non default port
+edit the `.env` file and add passwords the the `REPLACE_ME` sections and add ther servers IP to the `ALERT_FORWARDING`IP
+
+Edit the docker-compose.yml and edit the host port for copilot-frontend to a non default port, also do the same for the minio contianer host port.
+
+```
+docker-compose up -d
+```
+
+To get the `admin` credentials forthe GUI we need to run this command. The `plain` value is the password we need
+```
+docker logs "$(docker ps --filter ancestor=ghcr.io/socfortress/copilot-backend:latest --format "{{.ID}}")" 2>&1 | grep "Admin user password"
+```
