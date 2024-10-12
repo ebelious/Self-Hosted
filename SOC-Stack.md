@@ -52,6 +52,9 @@ sudo systemctl enable mongod.service
 sudo systemctl restart mongod.service
 sudo systemctl --type=service --state=active | grep mongod
 ```
+```
+sudo apt-mark hold mongodb-org
+```
 
 ---
 
