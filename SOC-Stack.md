@@ -1,7 +1,7 @@
 ## Instructions to install a SOC Stack
-This is a write up for installing the all-in-one SOC stack using free and open source tools which is greatly improved by integrating the tools with a project by  [socfortress](https://github.com/socfortress/CoPilot). This integrates a lot of the opensource tools we all love to use and allows you to utilize the benefits of each in a single pane of glass.
+This is a write-up for installing the all-in-one SOC stack using free and open-source tools which is greatly improved by integrating the tools with a project by  [socfortress](https://github.com/socfortress/CoPilot). This integrates a lot of the open-source tools we all love to use and allows you to utilize the benefits of each in a single pane of glass.
 
-** Note: This may be best used as a lab enviroment and not production
+** Note: This may be best used as a lab environment and not production
 
 1. Install Ubuntu 22.04
 2. Install Mongodb (5.0+)
@@ -11,6 +11,24 @@ This is a write up for installing the all-in-one SOC stack using free and open s
 6. Install Velociraptor
 7. Install Grafana
 8. Install [Soc-Fortress Copilot](https://github.com/socfortress/CoPilot)
+
+---
+
+Flow:
+
+```
+                                                               Data Enrichment         Wazuh Dashboard
+                                                                     ^                        ^  
+                                                                     |                        |         ----------> Grafana 
+                                                                     v                        v        |              |
+Wazuh Endpoints Agents ---> Wazuh Manager -----> Fluent-bit -----> Graylog -----> Wazuh Indexer (Opensearch) -----> CoPilot (Connnects to Wazuh Manager and Indexer individualy)
+                                                                     ^                                                ^ 
+Syslog Devices ------------------------------------------------------|   (MongoDB used for Graylog)                   |
+                                                                                                                      |
+Velociraptor ---------------------------------------------------------------------------------------------------------|
+
+
+```
 
 ---
 
@@ -207,7 +225,9 @@ Install fluent-bit
 curl https://raw.githubusercontent.com/fluent/fluent-bit/master/install.sh | sh
 ```
 
-remove all the contents of `/etc/fluent-bit/fluent-bit.conf` and add this 
+remove all the contents of `/etc/fluent-bit/fluent-bit.conf` and add this
+
+**Modify the port and IP 
 
 ```
 [SERVICE]
@@ -254,7 +274,7 @@ systemctl start fluent-bit
 
 ## Install [Velociraptor](https://github.com/Velocidex/velociraptor)
 
-This is installing the version 0.72, there is other releases on thier github 
+This is installing version 0.72, there are other releases on their github 
 ```
 wget https://github.com/Velocidex/velociraptor/releases/download/v0.72/velociraptor-v0.72.1-linux-amd64
 ```
@@ -267,9 +287,9 @@ This will run the interactive configuration
 ./velociraptor-v0.72.1-linux-amd6 config generate -i
 ```
 
-Edit the `server.config.yml` and change the GUI bind address to the servers IP
+Edit the `server.config.yml` and change the GUI bind address to the server IP
 
-Then we wil create the deb package for ther server binary to install 
+Then we will create the deb package for the server binary to install 
 ```
 ./velociraptor-v0.6.4-2-linux-amd64 --config server.config.yaml debian server --binary 
 ```
@@ -279,7 +299,7 @@ Install the server binary
 dpkg -i velociraptor_server_0.72.1_amd64.deb
 ```
 
-We will then create a debian server client package anmd also rpm package
+We will then create a debian server client package and also rpm package
 
 ```
 ./velociraptor-v0.72.1-linux-amd64 --config client.config.yaml debian client
@@ -288,7 +308,7 @@ We will then create a debian server client package anmd also rpm package
 ./velociraptor-v0.72.1-linux-amd64 --config client.config.yaml rpm client
 ```
 
-Creat an api config for copilot to connect
+Create an api config for copilot to connect
 
 ```
 ./velociraptor-v0.72.1-linux-amd64 --config server.config.yaml config api_client --name NAME_VALID_USER --role administrator,api api.config.yaml
@@ -346,26 +366,26 @@ admin: yes
 
 ## Install [CoPilot](https://github.com/socfortress/CoPilot)
 
-grab the rpo from their github
+grab the repo from their github
 ```
 git clone https://github.com/socfortress/CoPilot.git
 cd CoPilot
 cp .env.example .env
 ```
-edit the `.env` file and add passwords the the `REPLACE_ME` sections and add ther servers IP to the `ALERT_FORWARDING`IP
+edit the `.env` file and add passwords the the `REPLACE_ME` sections and add the servers IP to the `ALERT_FORWARDING`IP
 
-Edit the docker-compose.yml and edit the host port for copilot-frontend to a non default port, also do the same for the minio contianer host port.
+Edit the docker-compose.yml and edit the host port for copilot-frontend to a nondefault port, also do the same for the minio container host port.
 
 ```
 docker-compose up -d
 ```
 
-To get the `admin` credentials forthe GUI we need to run this command. The `plain` value is the password we need
+To get the `admin` credentials for the GUI we need to run this command. The `plain` value is the password we need
 ```
 docker logs "$(docker ps --filter ancestor=ghcr.io/socfortress/copilot-backend:latest --format "{{.ID}}")" 2>&1 | grep "Admin user password"
 ```
 
-Now we will add our connections we need to CoPilot.
+Now we will add the connections we need to CoPilot.
 ```
 wazuh-indexer: copilot user - port 9200
 wazuh-manager: wazuh-wui user - port 55000
@@ -377,8 +397,14 @@ unfluxdb - - port
 
 
 
-Now we will create a customer. You can name this whatever you want in accordacne with the input copilot requires
+Now we will create a customer. You can name this whatever you want in accordance with the input copilot requires
 
 On the `overview` dashboard, select `stack provisioning` and `deploy`
 
-Then select the customer you created ing he `customers` dashboard and provision customer
+Then select the customer you created in the `customers` click `details` and provision the customer
+
+---
+
+- Add agents to the Linux_Hosts or Windows Hosts depending on OS
+- Add GeoLiteDB to graylog
+- 
