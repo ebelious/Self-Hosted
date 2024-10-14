@@ -22,7 +22,7 @@ Flow:
                                                                      |                        |         ----------> Grafana 
                                                                      v                        v        |              |
 Wazuh Endpoints Agents ---> Wazuh Manager -----> Fluent-bit -----> Graylog -----> Wazuh Indexer (Opensearch) -----> CoPilot (Connnects to Wazuh Manager and Indexer individualy)
-                                                                     ^                                                ^ 
+                                                                     ^  \                                             ^ 
 Syslog Devices ------------------------------------------------------|   (MongoDB used for Graylog)                   |
                                                                                                                       |
 Velociraptor ---------------------------------------------------------------------------------------------------------|
