@@ -113,13 +113,13 @@ sudo systemctl restart wazuh-indexer
 Change the IPs of the server in the wazuh config to match the IP you will be accessing this from by editing`/etc/wazuh-dashboard/wazuh-dashboards.yml`
 
 Sign in and create the user for Graylog and Copilot
-`Index Management > Internal users` add (reccomended to use alpha-numeric password only)
+`Index Management > Internal users` add (recommended to use alpha-numeric password only)
 graylog - backend role: admin
 
 
 and now a user for `copilot`
 
-Go int oadd new `permissions`. Then you will click `create action group` in the cluster permissions
+Go into add new `permissions`. Then you will click `create action group` in the cluster permissions
 click `create new action group > from blank` and name this `copilot_action_group` 
 
 
@@ -134,7 +134,7 @@ read
 cluster_monitor
 
 ```
-Then go to roles and add a new `roles`.
+Then go to roles and add new `roles`.
 ```
 name: copilot
 password: create_one
@@ -154,7 +154,7 @@ prereqs:
 sudo apt install apt-transport-https openjdk-11-jre-headless uuid-runtime dirmngr
 ```
 
-Download and install graylog
+Download and install Graylog
 ```
 wget https://packages.graylog2.org/repo/packages/graylog-6.0-repository_latest.deb
 sudo dpkg -i graylog-6.0-repository_latest.deb
@@ -165,7 +165,7 @@ sudo apt-get install graylog-server
 sudo apt-mark hold graylog-server
 ```
 
-Now we will creata a password for the admin user and also generate a hash. May be good to put these in a text editor
+Now we will create a password for the admin user and also generate a hash. May be good to put these in a text editor
 
 password secret
 ```
@@ -177,7 +177,7 @@ echo -n "Enter Password: " && head -1 </dev/stdin | tr -d '\n' | sha256sum | cut
 ```
 Add these to `/etc/graylog/server/server.conf` in their respective places `elasticsearch_hosts`
 
-While we are in here we will also place the server IP address in the HTTPS configuration section
+While we are here we will also place the server IP address in the HTTPS configuration section
 ```
 elasticsearch_hosts = https://USER:PASSWORD@127.0.0.1:9200
 ```
@@ -204,7 +204,7 @@ Add the following under the section `Fix for log4j CVE-2021-44228` and coment ou
 GRAYLOG_SERVER_JAVA_OPTS="$GRAYLOG_SERVER_JAVA_OPTS -Dlog4j2.formatMsgNoLookups=true -Djavax.net.ssl.trustStore=/etc/graylog/server/certs/cacerts -Djavax.net.ssl.trustStorePassword=changeit"
 ```
 
-Access via web: `http://IP:9000`
+Access via the web: `http://IP:9000`
 go to `System` > `Users and Teams` > `Create user`
 Create `copilot` user 
 - Select session never expires
@@ -214,7 +214,7 @@ Create `copilot` user
 
 ## Install FluentBit
 
-For this we will not be using filebeat, but fluent-bit. We will disable and stop the filebeat service.
+For this, we will not be using filebeat, but fluent-bit. We will disable and stop the filebeat service.
 ```
 sudo systemctl disable filebeat
 sudo systemctl stop filebeat
@@ -308,7 +308,7 @@ We will then create a debian server client package and also rpm package
 ./velociraptor-v0.72.1-linux-amd64 --config client.config.yaml rpm client
 ```
 
-Create an api config for copilot to connect
+Create an API config for copilot to connect
 
 ```
 ./velociraptor-v0.72.1-linux-amd64 --config server.config.yaml config api_client --name NAME_VALID_USER --role administrator,api api.config.yaml
@@ -337,7 +337,7 @@ cp /etc/wazuh-indexer/certs/wazuh-indexer-key.pem /etc/grafana/certs/
 ```
 Modify the `/etc/grafana/grafana.ini` file
 
-in the `[server]` config make sure these are set
+in the `[server]` config make sure these are set (remove ';')
 
 ```
 protocol = https
