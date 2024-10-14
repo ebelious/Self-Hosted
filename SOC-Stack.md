@@ -405,6 +405,6 @@ Then select the customer you created in the `customers` click `details` and prov
 
 ---
 
-- Add agents to the Linux_Hosts or Windows Hosts depending on OS
+- Add agents to the Linux_<customer> or Windows_<customer> depending on OS
 - Add GeoLiteDB to graylog
 - 
