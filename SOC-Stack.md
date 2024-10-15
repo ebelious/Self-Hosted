@@ -388,6 +388,10 @@ generate a token for telegraf
 - Load Data > API Tokens > Custom API Token >
       Telegrafs (select `write` and `read`, provide a `name` for the token), keep note of this as this is used for telegraph config
       Buckets > telegraf (`read` and `write`)                                        
+Also Create an API token for Copilot, this will be only read access `Bucketrs: all buckets` and `Other resources: All Checks, and All Orgs`
+
+Again keep note of these API keys as you will note able to see them again 
+
 ---
 
 ## Install Telegraf
@@ -464,7 +468,7 @@ sudo systemctl start telegraf
 sudo systemctl status telegraf
 ```
 
-Now that influx and telegraf are configured, we will need to configure influx db to show us the proper data 
+Now that influxdb and telegraf are configured, we will need to configure influx db to show us the proper data 
 
 
 
