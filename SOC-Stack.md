@@ -384,9 +384,10 @@ sudo systemctl status influxdb
 
 Conect `http://<IP>:8086`
 
-generate token for telegraf
-- Load Data > API Tokens > Custom API Token > Telegrafs (select `write` and `read`, provide a `name` for the token), keep note of this as this is used for telegraph config
-
+generate a token for telegraf
+- Load Data > API Tokens > Custom API Token >
+      Telegrafs (select `write` and `read`, provide a `name` for the token), keep note of this as this is used for telegraph config
+      Buckets > telegraf (`read` and `write`)                                        
 ---
 
 ## Install Telegraf
@@ -456,6 +457,16 @@ Modify: URLs, token, organization ()token is generated in influx db
   # names starting with "a"
   pattern = ""
 ```
+
+```
+sudo systemctl enable telegraf
+sudo systemctl start telegraf
+sudo systemctl status telegraf
+```
+
+Now that influx and telegraf are configured, we will need to configure influx db to show us the proper data 
+
+
 
 ---
 
