@@ -1,7 +1,7 @@
 ## Instructions to install a SOC Stack
-This is a write-up for installing the all-in-one SOC stack using free and open-source tools which is greatly improved by integrating the tools with a project by  [socfortress](https://github.com/socfortress/CoPilot). This integrates a lot of the open-source tools we all love to use and allows you to utilize the benefits of each in a single pane of glass.
+This is a write-up for installing the all-in-one SOC stack using free and open-source tools which is greatly improved by integrating the tools with a project by  [socfortress](https://github.com/socfortress/CoPilot). This incorporates many of the open-source tools we all love to use and allows you to utilize the benefits of each in a single pane of glass. Just as a heads up, this may require a large amount of resources to run as many parts are running on one machine. Most of the credit goes to SocFortress for the guidees and tool they created
 
-** Note: This may be best used as a lab environment and not production
+** Note: This may be best used as a lab environment and not in production
 
 1. Install Ubuntu 22.04
 2. Install Mongodb (5.0+)
@@ -10,7 +10,9 @@ This is a write-up for installing the all-in-one SOC stack using free and open-s
 5. Install Fluent Bit
 6. Install Velociraptor
 7. Install Grafana
-8. Install [Soc-Fortress Copilot](https://github.com/socfortress/CoPilot)
+8. Install InfluxDB
+9. Install Telegraf
+10. Install [Soc-Fortress Copilot](https://github.com/socfortress/CoPilot)
 
 ---
 
@@ -22,19 +24,20 @@ Flow:
                                                                      |                        |         ----------> Grafana 
                                                                      v                        v        |              |
 Wazuh Endpoints Agents ---> Wazuh Manager -----> Fluent-bit -----> Graylog -----> Wazuh Indexer (Opensearch) -----> CoPilot (Connnects to Wazuh Manager and Indexer individualy)
-                                                                     ^  \                                             ^ 
-Syslog Devices ------------------------------------------------------|   (MongoDB used for Graylog)                   |
-                                                                                                                      |
-Velociraptor ---------------------------------------------------------------------------------------------------------|
-
+                                                                     ^  \                                             ^   |
+Syslog Devices ------------------------------------------------------|   (MongoDB used for Graylog)                   |   |
+                                                                                                                      |   -----> InfluxDB
+Velociraptor ---------------------------------------------------------------------------------------------------------|              ^
+                                                                                                                                     |
+Telegraf ----------------------------------------------------------------------------------------------------------------------------|
 
 ```
 
 ---
 
-## Install Ubuntu 22.04 on a vm (or hardware if youre daring enough)
-- The size of this vm may be dependant on the resources you have to add to the machine
-- same with disk space would depend on how many llogs youre injesting
+## Install Ubuntu 22.04 on a VM (or hardware if you are daring enough)
+- The size of this VM may be dependent on the resources you have to add to the machine
+- The same with disk space would depend on how many logs you're ingesting
 ```
 sudo sysctl -w vm.max_map_count=262144
 echo 'vm.max_map_count=262144' | sudo tee -a /etc/sysctl.conf
@@ -42,7 +45,7 @@ echo 'vm.max_map_count=262144' | sudo tee -a /etc/sysctl.conf
 
 ## Install Mongodb 5.0+
 This will install mongodb 6.0, the process would be the same for different versions, but you need to locate that repo instead pf 6.0. 
-Note: There is a cpu requuirement for mongodb 5.0+ (AVX support)
+Note: There is a CPU requirement for mongodb 5.0+ (AVX support)
 ```
 sudo apt update
 ```
@@ -192,7 +195,7 @@ sudo systemctl start graylog-server.service
 sudo systemctl --type=service --state=active | grep graylog
 ```
 
-So form here we will need to create a directory for the SSL certifiactes to allow gray log to communicate with opensearch
+So from here we will need to create a directory for the SSL certifiactes to allow gray log to communicate with opensearch
 ```
 mkdir /etc/graylog/server/certs
 cp /etc/wazuh-indexer/certs/root-ca.pem /etc/graylog/server/certs/
@@ -314,6 +317,8 @@ Create an API config for copilot to connect
 ./velociraptor-v0.72.1-linux-amd64 --config server.config.yaml config api_client --name NAME_VALID_USER --role administrator,api api.config.yaml
 ```
 
+Can connect `https://<IP>:8889`
+
 ---
 
 ## Install Grafana
@@ -363,6 +368,97 @@ admin: yes
 
 ---
 
+## Install InfluxDB
+
+```
+wget -q https://repos.influxdata.com/influxdata-archive_compat.key
+echo '393e8779c89ac8d958f81f942f9ad7fb82a25e133faddaf92e15b16e6ac9ce4c influxdata-archive_compat.key' | sha256sum -c && cat influxdata-archive_compat.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg > /dev/null
+echo 'deb [signed-by=/etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg] https://repos.influxdata.com/debian stable main' | sudo tee /etc/apt/sources.list.d/influxdata.list
+
+sudo apt-get update && sudo apt-get install influxdb2
+
+sudo systemctl enable influxdb
+sudo systemctl start influxdb
+sudo systemctl status influxdb
+```
+
+Conect `http://<IP>:8086`
+
+generate token for telegraf
+- Load Data > API Tokens > Custom API Token > Telegrafs (select `write` and `read`, provide a `name` for the token), keep note of this as this is used for telegraph config
+
+---
+
+## Install Telegraf
+```
+wget -q https://repos.influxdata.com/influxdata-archive_compat.key
+echo '393e8779c89ac8d958f81f942f9ad7fb82a25e133faddaf92e15b16e6ac9ce4c influxdata-archive_compat.key' | sha256sum -c && cat influxdata-archive_compat.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg > /dev/null
+echo 'deb [signed-by=/etc/apt/trusted.gpg.d/influxdata-archive_compat.gpg] https://repos.influxdata.com/debian stable main' | sudo tee /etc/apt/sources.list.d/influxdata.list
+sudo apt-get update && sudo apt-get install telegraf
+```
+We then will modify the `/etc/telegraf/telegraf.conf`
+
+Modify: URLs, token, organization ()token is generated in influx db
+```
+#### Telegraf Configuration - Linux Agents
+#
+# SOCFortress, LLP, info@socfortress.co
+#
+####
+[global_tags]
+[agent]
+  interval = "10s"
+  round_interval = true
+  metric_batch_size = 1000
+  metric_buffer_limit = 10000
+  collection_jitter = "0s"
+  flush_interval = "10s"
+  flush_jitter = "0s"
+  precision = ""
+  logtarget = "file"
+  logfile = "/var/log/telegraf/telegraf.log"
+  logfile_rotation_interval = "1d"
+  logfile_rotation_max_archives = 5
+  hostname = ""
+  omit_hostname = false
+[[outputs.influxdb_v2]]
+   urls = ["http://*REPLACE*:8086"]
+   token = "*PASS*"
+   organization = "ORG"
+   bucket = "telegraf"
+[[inputs.cpu]]
+  percpu = true
+  totalcpu = true
+  collect_cpu_time = false
+  report_active = false
+[[inputs.disk]]
+  ignore_fs = ["tmpfs", "devtmpfs", "devfs", "iso9660", "overlay", "aufs", "squashfs"]
+[[inputs.diskio]]
+[[inputs.kernel]]
+[[inputs.mem]]
+[[inputs.processes]]
+[[inputs.swap]]
+[[inputs.system]]
+[[inputs.net]]
+[[inputs.procstat]]
+  pattern = ".*"
+[[inputs.systemd_units]]
+  ## Set timeout for systemctl execution
+   timeout = "1s"
+
+  # Filter for a specific unit type, default is "service", other possible
+  # values are "socket", "target", "device", "mount", "automount", "swap",
+  # "timer", "path", "slice" and "scope ":
+  unittype = "service"
+
+  # Filter for a specific pattern, default is "" (i.e. all), other possible
+  # values are valid pattern for systemctl, e.g. "a*" for all units with
+  # names starting with "a"
+  pattern = ""
+```
+
+---
+
 
 ## Install [CoPilot](https://github.com/socfortress/CoPilot)
 
@@ -392,16 +488,19 @@ wazuh-manager: wazuh-wui user - port 55000
 graylog - copilot user - port 9000
 grafana - admin user - port 3000
 velociraptor - api.config.yaml
-unfluxdb - - port
+influxdb - - port 8086
 ```
 
 
 
-Now we will create a customer. You can name this whatever you want in accordance with the input copilot requires
+Now we will create a customer. You can name this whatever you want the input copilot requires
 
 On the `overview` dashboard, select `stack provisioning` and `deploy`
 
 Then select the customer you created in the `customers` click `details` and provision the customer
+
+
+---
 
 ---
 
