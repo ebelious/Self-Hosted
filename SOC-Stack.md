@@ -1,5 +1,5 @@
 ## Instructions to install a SOC Stack
-This is a write-up for installing the all-in-one SOC stack using free and open-source tools which is greatly improved by integrating the tools with a project by  [socfortress](https://github.com/socfortress/CoPilot). This incorporates many of the open-source tools we all love to use and allows you to utilize the benefits of each in a single pane of glass. Just as a heads up, this may require a large amount of resources to run as many parts are running on one machine. Most of the credit goes to SocFortress for the guidees and tool they created
+This is a write-up for installing the all-in-one SOC stack using free and open-source tools which is greatly improved by integrating the tools with a project by  [socfortress](https://github.com/socfortress/CoPilot). This incorporates many of the open-source tools we all love to use and allows you to utilize the benefits of each in a single pane of glass. Just as a heads up, this may require a large amount of resources to run as many parts are running on one machine. Most of the credit goes to SocFortress for the guides and tool they created
 
 ** Note: This may be best used as a lab environment and not in production
 
@@ -38,6 +38,7 @@ Telegraf -----------------------------------------------------------------------
 ## Install Ubuntu 22.04 on a VM (or hardware if you are daring enough)
 - The size of this VM may be dependent on the resources you have to add to the machine
 - The same with disk space would depend on how many logs you're ingesting
+** Note: I would probably be safe with min 12-16G of mem and 2-4 cpu
 ```
 sudo sysctl -w vm.max_map_count=262144
 echo 'vm.max_map_count=262144' | sudo tee -a /etc/sysctl.conf
