@@ -37,7 +37,7 @@ Telegraf -----------------------------------------------------------------------
 
 ## Install Ubuntu 22.04 on a VM (or hardware if you are daring enough)
 - The size of this VM may be dependent on the resources you have to add to the machine
-- The same with disk space would depend on how many logs you're ingesting
+- The same with disk space would depend on how many logs you're ingesting <\br>
 ** Note: I would probably be safe with min 12-16G of mem and 2-4 cpu
 ```
 sudo sysctl -w vm.max_map_count=262144
