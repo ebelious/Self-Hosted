@@ -303,6 +303,7 @@ dpkg -i velociraptor_server_0.72.1_amd64.deb
 ```
 
 We will then create a debian server client package and also rpm package
+** Note: modify te server URL to match the server IP
 
 ```
 ./velociraptor-v0.72.1-linux-amd64 --config client.config.yaml debian client
@@ -310,6 +311,19 @@ We will then create a debian server client package and also rpm package
 ```
 ./velociraptor-v0.72.1-linux-amd64 --config client.config.yaml rpm client
 ```
+
+Generate Windows client, download .exe from repo, repack linux into exe
+```
+wget https://github.com/Velocidex/velociraptor/releases/download/v0.72/velociraptor-v0.72.1-windows-amd64.exe
+
+./velociraptor-v0.72.1-linux-amd64 config repack --exe velociraptor-v0.72.1-windows-amd64.exe client.config.yaml velociraptor-v0.72.1-windows.exe
+```
+
+transfer new .exe and install on Windows client (user scp or sftp to transfer - may be easiest) 
+```
+.\velociraptor-v0.72.1-windows.exe service install  
+```
+
 
 Create an API config for copilot to connect
 
