@@ -80,34 +80,35 @@ sudo apt-mark hold mongodb-org
 ---
 
 ## Install [Wazuh 4.9](https://documentation.wazuh.com/current/quickstart.html)(open search)
-For this I use the quick install script 
+For this, I use the quick install script 
 ```
 curl -sO https://packages.wazuh.com/4.9/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
 ```
 
-Then we will modify memory useage for the Wazuh Indexer
+Then we will modify memory usage for the Wazuh Indexer
 ```
 sudo nano /etc/wazuh-indexer/opensearch.yml
 ```
 add this line somewhere in the config (opensearch.yml)
+** Note - when addding this, it seemed to create issues starting the service
 ```
 bootstrap.memory_lock: true
 ```
-Also make sure the network host is like this `network.host: "0.0.0.0"`
+Also, make sure the network host is like this `network.host: "0.0.0.0"`
 
 
-We will open this file and add the meomry lock line in the `Service` section
+We will open this file and add the memory lock line in the `Service` section
 ```
 nano /usr/lib/systemd/system/wazuh-indexer.service
 ```
 ```
 LimitMEMLOCK=infinity
 ```
-For this you do not want to exceed 50% of the total memory on the machine 
+For this, you do not want to exceed 50% of the total memory on the machine 
 ```
 nano /etc/wazuh-indexer/jvm.options
 ```
-edit the `-Xms4g` and `-Xmx4g` value to not be above half of the memory
+edit the `-Xms4g` and `-Xmx4g` values to not be above half of the memory (needs matching values)
 ```
 sudo systemctl daemon-reload
 sudo systemctl restart wazuh-indexer
@@ -147,6 +148,8 @@ index permissions: read index indices_all
 ```
 
 then map `copilot` user to this role, nothing else is needed
+
+You can also generate agents on your devices
 
 ---
 
@@ -303,7 +306,7 @@ dpkg -i velociraptor_server_0.72.1_amd64.deb
 ```
 
 We will then create a debian server client package and also rpm package
-** Note: modify te server URL to match the server IP
+** Note: modify the server URL to match the server IP
 
 ```
 ./velociraptor-v0.72.1-linux-amd64 --config client.config.yaml debian client
@@ -497,7 +500,7 @@ git clone https://github.com/socfortress/CoPilot.git
 cd CoPilot
 cp .env.example .env
 ```
-edit the `.env` file and add passwords the the `REPLACE_ME` sections and add the servers IP to the `ALERT_FORWARDING`IP
+edit the `.env` file and add passwords the the `REPLACE_ME` sections and add the server IP to the `ALERT_FORWARDING`
 
 Edit the docker-compose.yml and edit the host port for copilot-frontend to a nondefault port, also do the same for the minio container host port.
 
