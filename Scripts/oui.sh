@@ -8,7 +8,7 @@
 #
 # OUI lookup Tool - Uses Wireshare DB
 # 
-# You need to download and reference this file for DB lookups (need to decompress, and reference in the db file path in the script)
+# You need to download and reference this file for DB lookups (need to decompress, and reference the db file path in the script (uses script directory by default))
 # https://www.wireshark.org/download/automated/data/manuf.gz
 #
 
