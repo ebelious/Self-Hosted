@@ -57,7 +57,7 @@ fi
 
 get_oui $1
 
-if [ $? -ne 0 ]; then
-	echo "No OUI was found."
+if [[ $? -ne 0 ]]; then
+	echo "No OUI was found in the database."
 	exit 1
 fi
