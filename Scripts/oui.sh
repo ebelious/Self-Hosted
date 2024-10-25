@@ -45,7 +45,7 @@ then
 
 elif [[ $1 =~ ^([0-9A-Fa-f]{2}[-]){2}([0-9A-Fa-f]{2})$ ]]
 then
-        OUI=$(echo "$1" | cut -d ':' -f 1-3 | tr '[:lower:]' '[:upper:]')
+        OUI=$(echo "$1" | tr -d '-' | sed -e 's/[0-9A-Fa-f]\{2\}/&:/g' -e 's/:$//' | cut -d ':' -f 1-3 | tr '[:lower:]' '[:upper:]')
         cat ./manuf | grep $OUI
         exit 0
 else
