@@ -34,6 +34,9 @@ Telegraf -----------------------------------------------------------------------
 ```
 
 ---
+#### ** Upadate:
+Socfortress releaed a docker-compose for this stack 
+[OSSIEM](https://github.com/socfortress/OSSIEM)
 
 ## Install Ubuntu 22.04 on a VM (or hardware if you are daring enough)
 - The size of this VM may be dependent on the resources you have to add to the machine
