@@ -36,6 +36,7 @@
 - [Linux Enterprise Account](https://github.com/ebelious/Self-Hosted/blob/main/Linux%20Enterprise%20Account.md)
 - [Proxmox / Backup / GPU Passthrough / Users and Permissions](https://github.com/ebelious/Self-Hosted/blob/main/Proxmox.md)
 - [Activate Windows Server](https://github.com/ebelious/Self-Hosted/blob/main/Activate%20Windows%20Server.md)
+- [NextCloud](https://github.com/ebelious/Self-Hosted/blob/main/nextcloud.md)
 
 #
 ## Tools:
