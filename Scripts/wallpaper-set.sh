@@ -11,7 +11,7 @@
 #
 
 # This is a script for setting a persistent wallpaper - writes variable to .bash_profile, .bashrc and river ini (the only way to get persistant)
-# This uses sxiv to select a image from a wlalpaper directory. Selecting an image with 'M' then exit with "Q" will set the wall paper
+# This uses sxiv to select a image from a wallpaper directory. Selecting an image with 'M' then exit with "Q" will set the wallpaper
 
 # Add this to the river init file:
 # WALLPAPER=""
@@ -21,7 +21,7 @@
 
 # Set the image in a variable to pass to swaybg - sets WALLPAPER variable in river init file to be persistant
 
-echo -e "Use 'M' to select the wallpaper and 'Q to quit the program'\nVerify the directory is correct to scrape the wallpapersi\nThis is configure to be persistant with the River Window manager"
+echo -e "Use 'M' to select the wallpaper and 'Q to quit the program'\nVerify the directory is correct to scrape the wallpapers\nThis is configured to be used with the River Window manager"
 
 WALLPAPER=$(sxiv -to $HOME/.config/Self-Hosted/Wallpapers/ | awk -F'/' '{print $NF}')
 
