@@ -38,4 +38,4 @@ else
    # sed -i "/export WALLPAPER=/s/\".*\"/\"$WALLPAPER\"/" $HOME/.bash_profile
     sudo sed -i "/WALLPAPER=/s/\".*\"/\"$WALLPAPER\"/" $HOME/.config/river/init
 fi
-echo -e "Use 'M' to select the wallpaper and 'Q to quit the program'\n Verify the directory is correct to scrape the wallpapers"
+echo -e "Use 'M' to select the wallpaper and 'Q to quit the program'\n\nVerify the directory is correct to scrape the wallpapers"
