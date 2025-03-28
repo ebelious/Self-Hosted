@@ -28,9 +28,6 @@ WALLPAPER=$(sxiv -to $HOME/.config/Self-Hosted/Wallpapers/ | awk -F'/' '{print $
 if [[ -z $WALLPAPER ]]; then
     echo -e "\e[0;31m[Err]\e[0m Wallpaper not selected - No Changes Made"
     exit 1
-elif [[ $? -ne -0 ]];then
-    echo -e "\e[0;31m[Err]\e[0m sxvi had an error - No Changes Made"
-    exit 1
 else
     pkill swaybg
     swaybg -m fill -i $HOME/.config/Self-Hosted/Wallpapers/$WALLPAPER &>/dev/null &
