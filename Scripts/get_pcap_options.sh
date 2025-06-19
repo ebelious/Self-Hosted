@@ -18,8 +18,8 @@
 # This lets you select the caategory of pcaps to pull form the firewall
 
 # Variables
-FW_IP="10.0.0.3"
-API_KEY="LUFRPT1XeGd6QUhxNUhNeERabzV2MGNKTzVMR2tOOW89RlhkYVI5djhFTnJCdlpaTVMwYWhZN1VYSnVvRVhRV3Q3dGcxOE9ESHpzUlFnaFNjL1pTZkdzbTJPT1hvT3RjTA=="
+FW_IP="<MGMT INTERFACE IP>"
+API_KEY="API KEY"
 PCAP_LIST_OUTPUT="pcap_paths.txt"
 DEBUG=false
 CATEGORY=""
