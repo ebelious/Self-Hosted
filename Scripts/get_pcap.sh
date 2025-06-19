@@ -23,6 +23,8 @@ FW_IP="<MGME INTERFACE IP>"
 API_KEY="<API Key>"
 PCAP_LIST_OUTPUT="pcap_paths.txt"
 DEBUG=false
+# Modify 'dest_dir' variable for pcap storage location
+
 
 # Colors
 RED='\033[0;31m'
