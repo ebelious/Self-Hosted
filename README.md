@@ -18,6 +18,7 @@
 - [Ollama / Stable-Diffusion / Open-WebUI / Opendai-speech](https://github.com/ebelious/Self-Hosted/blob/main/Install%20Open-WebUI%20with%20local%20hosted%20Ollama%20-%20Linux.md)
 - [Fabric](https://github.com/ebelious/Self-Hosted/blob/main/Fabric.md)
 ### Security
+- [Hardened Ubuntu Server] (https://github.com/ebelious/Self-Hosted/blob/main/Hardened%20Ubuntu%20Server.md)
 - [CIS Compliance Ubuntu Server](https://github.com/ebelious/Self-Hosted/blob/main/CIS-Ubuntu.md)
 - [SOC Stack - using open source and free tools](https://github.com/ebelious/Self-Hosted/blob/main/SOC-Stack.md)
 - [Wazuh](https://github.com/ebelious/Self-Hosted/blob/main/Wazuh.md)
