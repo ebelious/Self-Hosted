@@ -27,10 +27,6 @@ sudo pro attach <TOKEN>
 ```
 sudo pro enable usg
 ```
-```
-sudo apt install -y usg ubuntu-advantage-tools
-```
-
 
 ### Generate a tailoring file
 This is the hardening rules that will be used to measure against for the audit, and to use for remediation
