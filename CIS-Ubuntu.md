@@ -15,7 +15,7 @@ You can also activate this after installation by entering a token generated from
 * Note if you did not choose to install pro during installation you will not have this by default in the minimal server version.
 this will install pro 
 ```
-  sudo apt install ubuntu-advantage-tools
+sudo apt install ubuntu-advantage-tools
 ```
 
 Get a token from the link above
