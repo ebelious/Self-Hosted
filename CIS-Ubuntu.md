@@ -11,6 +11,14 @@ This process does require [Ubuntu Pro](https://ubuntu.com/pro/) which you can ge
 You can activate Ubuntu Pro during the server installation by 2 methods. Either by entering the code displayed by the server and entering it on your [Ubuntu Pro profile - Attach](https://ubuntu.com/pro/attach) or entering the token from you [Ubuntu Pro profile - Token](https://ubuntu.com/pro/dashboard) 
 
 You can also activate this after installation by entering a token generated from your [Ubuntu Pro profile - Token](https://ubuntu.com/pro/dashboard)
+
+* Note if you did not choose to install pro during installation you will not have this by default in the minimal server version.
+this will install pro 
+```
+  sudo apt install ubuntu-advantage-tools
+```
+
+Get a token from the link above
 ```
 sudo pro attach <TOKEN>
 ```
