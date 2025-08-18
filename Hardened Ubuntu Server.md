@@ -12,10 +12,10 @@ NAME                                     MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
   ├─vg--ubuntu-lv_ubuntu_root            252:0    0   15G  0 lvm  /
   ├─vg--ubuntu-lv_ubuntu_swap            252:1    0    2G  0 lvm  [SWAP]
   ├─vg--ubuntu-lv_ubuntu_var             252:2    0   10G  0 lvm  /var
-  ├─vg--ubuntu-lv_ubuntu_var_tmp             252:3    0    2G  0 lvm  /var/tmp
+  ├─vg--ubuntu-lv_ubuntu_var_tmp         252:3    0    2G  0 lvm  /var/tmp
   ├─vg--ubuntu-lv_ubuntu_home            252:4    0   24G  0 lvm  /home
-  ├─vg--ubuntu-lv_ubuntu_var_log        252:5    0    9G  0 lvm  /var/log
-  └─vg--ubuntu-lv_ubuntu_var_log_audit 252:6    0    1G  0 lvm  /var/log/audit
+  ├─vg--ubuntu-lv_ubuntu_var_log         252:5    0    9G  0 lvm  /var/log
+  └─vg--ubuntu-lv_ubuntu_var_log_audit   252:6    0    1G  0 lvm  /var/log/audit
   ```
 Fstab
 ```
