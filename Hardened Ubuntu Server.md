@@ -97,6 +97,7 @@ Run a compliance audit and fix
 Follow this [CIS](https://github.com/ebelious/Self-Hosted/blob/main/CIS-Ubuntu.md) benchmark doc for compliance 
 Run the Lynis scan for additional recommendations
   - *NOTE: changes to ssh would not take in the normal sshd_conf file but they work when modifying the files in /etc/ssh/sshd_config.d/*
+  - *NOTE: set ACLs for wazuh to read so the files and not recieve false CIS scoring* `sudo setfacl -m g:wazuh:r /var/log/custom.log`
 ```
 sudo apt install lynis
 sudo lynis audit system
