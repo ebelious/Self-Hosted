@@ -33,6 +33,6 @@ else
     swaybg -m fill -i $HOME/.config/Self-Hosted/Wallpapers/$WALLPAPER &>/dev/null &
    # sed -i "/export WALLPAPER=/s/\".*\"/\"$WALLPAPER\"/" $HOME/.bashrc
    # sed -i "/export WALLPAPER=/s/\".*\"/\"$WALLPAPER\"/" $HOME/.bash_profile
-    sudo sed -i "/WALLPAPER=/s/\".*\"/\"$WALLPAPER\"/" $HOME/.config/river/init
+    sed -i "/WALLPAPER=/s/\".*\"/\"$WALLPAPER\"/" $HOME/.config/river/init
 fi
 echo -e "Use 'M' to select the wallpaper and 'Q to quit the program'\n\nVerify the directory is correct to scrape the wallpapers"
