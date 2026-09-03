@@ -1,0 +1,19 @@
+background-color={background}
+text-color={foreground}
+border-color={color4}
+progress-color=over {color8}
+
+[urgency=low]
+background-color={background}
+text-color={color8}
+border-color={color8}
+
+[urgency=normal]
+background-color={background}
+text-color={foreground}
+border-color={color4}
+
+[urgency=critical]
+background-color={background}
+text-color=#fb4934
+border-color=#fb4934
