@@ -1,0 +1,21 @@
+#!/bin/sh
+SPOOL=/run/clamav/alerts
+LOCK=/tmp/clam-notify.$(id -u).lock
+QUAR=/var/quarantine
+
+exec 9>"$LOCK"
+flock -n 9 || exit 0
+
+while [ ! -e "$SPOOL" ]; do sleep 5; done
+
+tail -n0 -F "$SPOOL" 2>/dev/null | while IFS="$(printf '\t')" read -r ts name file; do
+    [ -n "$name" ] || continue
+    base=$(basename "$file" 2>/dev/null)
+    dir=$(dirname "$file" 2>/dev/null)
+    notify-send -u critical -i security-high \
+        "ClamAV: $name" \
+        "File: $base
+Path: $dir
+Moved to: $QUAR
+$(printf '%s' "$ts" | cut -dT -f2 | cut -d- -f1)"
+done

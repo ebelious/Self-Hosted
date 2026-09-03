@@ -1,0 +1,9 @@
+#!/bin/sh
+# Launch River with the environment the XDG portals need.
+export XDG_CURRENT_DESKTOP=river
+export XDG_SESSION_DESKTOP=river
+export XDG_SESSION_TYPE=wayland
+
+# dbus-run-session gives the portals a session bus that inherits the
+# exports above. Void has no systemd user session to import them into.
+exec dbus-run-session river "$@"
