@@ -1,3 +1,4 @@
+```
 pywal/
 ├── README.md
 ├── install.sh
@@ -13,3 +14,4 @@ pywal/
 │   └── colors-mako
 └── waybar/
     └── style.css
+```
